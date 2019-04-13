@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
 class Home extends Component {	
 
@@ -9,7 +10,7 @@ class Home extends Component {
 	render() {
         return(
             <div>
-                aaaa
+                aa
             </div>
         )
     }
