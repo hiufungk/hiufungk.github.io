@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
+import IconButton from '@material-ui/core/IconButton';
+import './css/TopNavBar.css';
+import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 
-class TopNavBar extends Component {	
+class TopNavBar extends Component {
 
 	render() {
         return(
-          <Navbar fluid collapseOnSelect expand="lg" bg="primary" variant="dark">
+          <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
               <Navbar.Brand href="/">
                   Kevin Chang
               </Navbar.Brand>
@@ -17,6 +20,30 @@ class TopNavBar extends Component {
                       <NavLink className="nav-link" to="/projects">Projects</NavLink>
                       <NavLink className="nav-link" to="/about-me">About Me</NavLink>
                   </Nav>
+                  <a
+                      href="http://github.com/hiufungk/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                  >
+                      <Tooltip title="View my GitHub">
+                          <IconButton className="github">
+                              <i className="fab fa-github"/>
+                          </IconButton>
+                      </Tooltip>
+                  </a>
+
+                  <a
+                      href="https://www.linkedin.com/in/kevinhfchang/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                  >
+                      <Tooltip title="View my Linkedin">
+                          <IconButton className="linkedin">
+                              <i className="fab fa-linkedin"/>
+                          </IconButton>
+                      </Tooltip>
+                  </a>
+
               </Navbar.Collapse>
           </Navbar>
         );
