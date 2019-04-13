@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {Route, Switch, BrowserRouter} from "react-router-dom";
+import {Route, Switch, BrowserRouter, Redirect} from "react-router-dom";
+import Projects from "./pages/Projects"
 import Home from "./pages/Home"
+import AboutMe from "./pages/AboutMe"
 import TopNavBar from './components/TopNavBar';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -23,7 +25,12 @@ class App extends Component {
             <BrowserRouter>
                 <TopNavBar/>
                 <Switch>
-                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/" component={Home}>
+                        <Redirect to="/home"/>
+                    </Route>
+                    <Route exact path="/home" component={Home}/>
+                    <Route exact path="/projects" component={Projects}/>
+                    <Route exact path="/aa" component={AboutMe}/>
                 </Switch>
             </BrowserRouter>
         </MuiThemeProvider>

@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { NavLink } from "react-router-dom";
 
 class TopNavBar extends Component {	
 
 	render() {
         return(
           <Navbar fluid collapseOnSelect expand="lg" bg="primary" variant="dark">
-              <Navbar.Brand href="#home">
-                  React-Bootstrap
+              <Navbar.Brand href="/">
+                  Kevin Chang
               </Navbar.Brand>
               <Navbar.Toggle/>
               <Navbar.Collapse>
-                  <Nav>
-                      <Nav.Link href="#features">Features</Nav.Link>
-                      <Nav.Link href="#pricing">Pricing</Nav.Link>
+                  <Nav className="mr-auto">
+                      <NavLink className="nav-link" to="/home">Home</NavLink>
+                      <NavLink className="nav-link" to="/projects">Projects</NavLink>
+                      <NavLink className="nav-link" to="/about-me">About Me</NavLink>
                   </Nav>
               </Navbar.Collapse>
           </Navbar>
