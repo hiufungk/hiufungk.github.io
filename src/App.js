@@ -30,7 +30,7 @@ class App extends Component {
                     </Route>
                     <Route exact path="/home" component={Home}/>
                     <Route exact path="/projects" component={Projects}/>
-                    <Route exact path="/aa" component={AboutMe}/>
+                    <Route exact path="/about-me" component={AboutMe}/>
                 </Switch>
             </BrowserRouter>
         </MuiThemeProvider>
