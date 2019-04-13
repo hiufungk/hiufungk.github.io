@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import Button from '@material-ui/core/Button';
 
 class Home extends Component {	
 
@@ -11,6 +11,10 @@ class Home extends Component {
         return(
             <div>
                 in progress...
+                <Button variant="contained" color="secondary" >
+                Delete
+
+              </Button>
             </div>
         )
     }
