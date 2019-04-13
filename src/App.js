@@ -10,12 +10,12 @@ import TopNavBar from './components/TopNavBar';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-          <TopNavBar/>
-					<Switch>
-						<Route exact path="/" component={Home}/>
-					</Switch>
-      </BrowserRouter>
+        <BrowserRouter>
+            <TopNavBar/>
+            <Switch>
+                <Route exact path="/" component={Home}/>
+            </Switch>
+        </BrowserRouter>
     );
   }
 }
