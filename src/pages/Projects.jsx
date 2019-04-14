@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ProjectCard from "../components/ProjectCard";
 import gitFriendsAuthorPageImage from "../assets/git-friends/author_page.png"
 import gitFriendsCommentsImage from "../assets/git-friends/comments.png"
-import gitFriendsCreatePost2Image from "../assets/git-friends/creating_post_img2.png"
-import gitFriendsCreatePost1Image from "../assets/git-friends/creating_post_page1.png"
-import gitFriendsFriendRequestImage from "../assets/git-friends/friendRequestsWithLocalAndForeign.png"
+import gitFriendsCreatePost2Image
+    from "../assets/git-friends/creating_post_img2.png"
+import gitFriendsCreatePost1Image
+    from "../assets/git-friends/creating_post_page1.png"
+import gitFriendsFriendRequestImage
+    from "../assets/git-friends/friendRequestsWithLocalAndForeign.png"
 import gitFriendsStreamImage from "../assets/git-friends/stream.png"
 
 class Projects extends Component {
 
-	constructor(props) {
-		super(props);
-    }	
+    constructor(props) {
+        super(props);
+    }
 
     gitFriendsImages = [
         {
@@ -40,8 +43,8 @@ class Projects extends Component {
         },
     ];
 
-	render() {
-        return(
+    render() {
+        return (
             <div>
                 i am projects page
                 <ProjectCard source={this.gitFriendsImages}/>

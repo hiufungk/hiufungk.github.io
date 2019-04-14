@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class AboutMe extends Component {
 
-	constructor(props) {
-		super(props);
-    }	
+    constructor(props) {
+        super(props);
+    }
 
-	render() {
-        return(
+    render() {
+        return (
             <div>
                 i am about me page
             </div>
