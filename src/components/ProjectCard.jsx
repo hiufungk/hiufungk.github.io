@@ -16,6 +16,7 @@ import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
 
 import "./css/TopNavBar.css"
+import CardHeader from "@material-ui/core/CardHeader/CardHeader";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -102,10 +103,11 @@ class ProjectCard extends Component {
         const maxSteps = source.length;
         return (
             <Paper className={classes.root}>
+                <CardHeader title={this.props.title} />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {this.props.title}
-                    </Typography>
+                    {/*<Typography gutterBottom variant="h5" component="h2">*/}
+                        {/*{this.props.title}*/}
+                    {/*</Typography>*/}
                     <Typography component="p">
                         {this.props.description}
                     </Typography>
@@ -147,6 +149,7 @@ class ProjectCard extends Component {
                         </Button>
                     }
                 />
+                <CardContent>
                 <CardActions>
                     {this.getGithubButton()}
                     <a
@@ -162,6 +165,7 @@ class ProjectCard extends Component {
                 <CardActions>
                     {this.getChips()}
                 </CardActions>
+                </CardContent>
             </Paper>
         );
     }
