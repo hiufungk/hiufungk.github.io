@@ -8,6 +8,7 @@ import gitFriendsFriendRequestImage
     from "./assets/git-friends/friendRequestsWithLocalAndForeign.png";
 import gitFriendsStreamImage from "./assets/git-friends/stream.png";
 import gitFriendsLoginImage from "./assets/git-friends/login.png";
+import gitFriendsGithub from "./assets/git-friends/githubActivity.png"
 
 import outdoorsLoginImage from "./assets/outdoors-club/login.png";
 import gearPageImage from "./assets/outdoors-club/gear_page.png";
@@ -69,6 +70,10 @@ export const GITFRIENDS_INFO = {
         {
             label: 'Stream',
             imgPath: gitFriendsStreamImage,
+        },
+        {
+            label: 'GitHub Integration',
+            imgPath: gitFriendsGithub,
         },
     ]
 };
