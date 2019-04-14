@@ -1,14 +1,6 @@
 import React, {Component} from 'react';
 import ProjectCard from "../components/ProjectCard";
-import gitFriendsAuthorPageImage from "../assets/git-friends/author_page.png"
-import gitFriendsCommentsImage from "../assets/git-friends/comments.png"
-import gitFriendsCreatePost2Image
-    from "../assets/git-friends/creating_post_img2.png"
-import gitFriendsCreatePost1Image
-    from "../assets/git-friends/creating_post_page1.png"
-import gitFriendsFriendRequestImage
-    from "../assets/git-friends/friendRequestsWithLocalAndForeign.png"
-import gitFriendsStreamImage from "../assets/git-friends/stream.png"
+import * as consts from "../constants.js";
 
 class Projects extends Component {
 
@@ -16,38 +8,25 @@ class Projects extends Component {
         super(props);
     }
 
-    gitFriendsImages = [
-        {
-            label: 'Author Profile Page',
-            imgPath: gitFriendsAuthorPageImage,
-        },
-        {
-            label: 'Creating Post',
-            imgPath: gitFriendsCreatePost1Image,
-        },
-        {
-            label: 'Creating post with images',
-            imgPath: gitFriendsCreatePost2Image,
-        },
-        {
-            label: 'Comments',
-            imgPath: gitFriendsCommentsImage,
-        },
-        {
-            label: 'Friend Request',
-            imgPath: gitFriendsFriendRequestImage,
-        },
-        {
-            label: 'Stream',
-            imgPath: gitFriendsStreamImage,
-        },
-    ];
-
     render() {
         return (
             <div>
                 i am projects page
-                <ProjectCard source={this.gitFriendsImages}/>
+                <ProjectCard
+                    title={consts.GITFRIENDS_INFO.title}
+                    description={consts.GITFRIENDS_INFO.description}
+                    demoLink={consts.GITFRIENDS_INFO.demoLink}
+                    githubLink={consts.GITFRIENDS_INFO.githubLink}
+                    source={consts.GITFRIENDS_INFO.images}
+                />
+
+                <ProjectCard
+                    title={consts.OUTDOORS_INFO.title}
+                    description={consts.OUTDOORS_INFO.description}
+                    demoLink={consts.OUTDOORS_INFO.demoLink}
+                    source={consts.OUTDOORS_INFO.images}
+                    isPrivate
+                />
             </div>
         )
     }
