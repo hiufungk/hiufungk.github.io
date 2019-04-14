@@ -36,19 +36,25 @@ class Projects extends Component {
                 />
 
                 <ProjectCard
-                    title={consts.OUTDOORS_INFO.title}
-                    description={consts.OUTDOORS_INFO.description}
-                    demoLink={consts.OUTDOORS_INFO.demoLink}
-                    source={consts.OUTDOORS_INFO.images}
-                    isPrivate
+                    title={consts.MEMORYWAVE_INFO.title}
+                    description={consts.MEMORYWAVE_INFO.description}
+                    githubLink={consts.MEMORYWAVE_INFO.githubLink}
+                    source={consts.MEMORYWAVE_INFO.images}
                 />
 
                 <ProjectCard
-                    title={consts.OUTDOORS_INFO.title}
-                    description={consts.OUTDOORS_INFO.description}
-                    demoLink={consts.OUTDOORS_INFO.demoLink}
-                    source={consts.OUTDOORS_INFO.images}
-                    isPrivate
+                    title={consts.HFOLD_INFO.title}
+                    description={consts.HFOLD_INFO.description}
+                    githubLink={consts.HFOLD_INFO.githubLink}
+                    source={consts.HFOLD_INFO.images}
+                />
+
+                <ProjectCard
+                    title={consts.FEELTRIP_INFO.title}
+                    description={consts.FEELTRIP_INFO.description}
+                    githubLink={consts.FEELTRIP_INFO.githubLink}
+                    demoLink={consts.FEELTRIP_INFO.demoLink}
+                    source={consts.FEELTRIP_INFO.images}
                 />
             </Grid>
 

@@ -154,7 +154,7 @@ class ProjectCard extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <Button size="small" color="primary">
+                        <Button hidden={!this.props.demoLink} size="small" color="primary">
                             Video Demo
                         </Button>
                     </a>

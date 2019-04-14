@@ -9,20 +9,29 @@ import gitFriendsFriendRequestImage
 import gitFriendsStreamImage from "./assets/git-friends/stream.png";
 import gitFriendsLoginImage from "./assets/git-friends/login.png";
 
-import outdoorsLoginImage
-    from "./assets/outdoors-club/login.png";
-import gearPageImage
-    from "./assets/outdoors-club/gear_page.png";
-import rentPageImage
-    from "./assets/outdoors-club/rent_page.png";
-import checkoutImage
-    from "./assets/outdoors-club/checkout.png";
-import reservationPageImage
-    from "./assets/outdoors-club/reservation_page.png";
-import reservationImage
-    from "./assets/outdoors-club/reservation.png";
-import statsImage
-    from "./assets/outdoors-club/stats.png";
+import outdoorsLoginImage from "./assets/outdoors-club/login.png";
+import gearPageImage from "./assets/outdoors-club/gear_page.png";
+import rentPageImage from "./assets/outdoors-club/rent_page.png";
+import checkoutImage from "./assets/outdoors-club/checkout.png";
+import reservationPageImage from "./assets/outdoors-club/reservation_page.png";
+import reservationImage from "./assets/outdoors-club/reservation.jpg";
+import statsImage from "./assets/outdoors-club/stats.png";
+import addGearImage from "./assets/outdoors-club/addGear.jpg";
+import membersImage from "./assets/outdoors-club/members.jpg";
+import settingsImage from "./assets/outdoors-club/settings.jpg";
+import reservationFormImage from "./assets/outdoors-club/reservationForm.jpg"
+
+import loops from "./assets/hfold/loops.png";
+import loops2 from "./assets/hfold/loops2.png";
+import hfoldText from "./assets/hfold/text.png";
+
+import memoryMenu1 from "./assets/memory-wave/menu1.png";
+import memoryMenu2 from "./assets/memory-wave/menu2.png";
+import memoryGame from "./assets/memory-wave/game.png";
+
+import feelTripFeed from "./assets/feeltrip/feed.png";
+
+
 
 export const GITFRIENDS_INFO = {
     title: "GitFriends",
@@ -75,8 +84,15 @@ export const OUTDOORS_INFO = {
             imgPath: gearPageImage,
         },
         {
+            label: 'Creating Gear',
+            imgPath: addGearImage,
+        },
+        {
             label: 'Gear Rental Page',
             imgPath: rentPageImage,
+        },{
+            label: 'Reservation Form',
+            imgPath: reservationFormImage,
         },
         {
             label: 'Rental Checkout',
@@ -93,6 +109,67 @@ export const OUTDOORS_INFO = {
         {
             label: 'Statistics',
             imgPath: statsImage,
+        },
+        {
+            label: 'Member Management',
+            imgPath: membersImage,
+        },
+        {
+            label: 'Settings',
+            imgPath: settingsImage,
+        }
+    ]
+};
+
+export const FEELTRIP_INFO = {
+    title: "FeelTrip",
+    description: "DDDDD",
+    githubLink: "https://github.com/CMPUT301W17T11/FeelTrip",
+    demoLink: "https://youtu.be/Yo6Uv4B39sM",
+    images: [
+        {
+            label: 'Feed',
+            imgPath: feelTripFeed,
+        }
+    ]
+};
+
+export const MEMORYWAVE_INFO = {
+    title: "Memory Wave",
+    description: "YYYYY",
+    githubLink: "https://github.com/Hk-tang/MemoryWave",
+    images: [
+        {
+            label: 'Start Screen',
+            imgPath: memoryMenu1,
+        },
+        {
+            label: 'Song Select Menu',
+            imgPath: memoryMenu2,
+        },
+        {
+            label: 'Gameplay',
+            imgPath: memoryGame,
+        }
+    ]
+};
+
+export const HFOLD_INFO = {
+    title: "HFold (iterative / interacting)",
+    description: "XXXXXXXXXXX",
+    githubLink: "https://github.com/HosnaJabbari",
+    images: [
+        {
+            label: 'Examples of loops',
+            imgPath: loops2,
+        },
+        {
+            label: 'Examples of recurrence',
+            imgPath: loops,
+        },
+        {
+            label: 'Example',
+            imgPath: hfoldText,
         }
     ]
 };
