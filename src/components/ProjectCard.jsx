@@ -87,9 +87,9 @@ class ProjectCard extends Component {
     }
 
     getChips() {
-        if (this.props.chips) {
+        if (this.props.tags) {
             return (
-                this.props.chips.map((value) => (
+                this.props.tags.map((value) => (
                         <Chip label={value} color="secondary"/>
                         ))
             );
@@ -176,7 +176,7 @@ ProjectCard.propTypes = {
     demoLink: PropTypes.string,
     githubLink: PropTypes.string,
     isPrivate: PropTypes.bool,
-    chips: PropTypes.array
+    tags: PropTypes.array
 };
 
 export default withStyles(styles, {withTheme: true})(ProjectCard);

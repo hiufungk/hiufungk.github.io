@@ -24,7 +24,7 @@ class Projects extends Component {
                     demoLink={consts.GITFRIENDS_INFO.demoLink}
                     githubLink={consts.GITFRIENDS_INFO.githubLink}
                     source={consts.GITFRIENDS_INFO.images}
-                    chips={["aaa", "bbb"]}
+                    tags={consts.GITFRIENDS_INFO.tags}
                 />
 
                 <ProjectCard
@@ -32,6 +32,7 @@ class Projects extends Component {
                     description={consts.OUTDOORS_INFO.description}
                     demoLink={consts.OUTDOORS_INFO.demoLink}
                     source={consts.OUTDOORS_INFO.images}
+                    tags={consts.OUTDOORS_INFO.tags}
                     isPrivate
                 />
 
@@ -40,6 +41,7 @@ class Projects extends Component {
                     description={consts.MEMORYWAVE_INFO.description}
                     githubLink={consts.MEMORYWAVE_INFO.githubLink}
                     source={consts.MEMORYWAVE_INFO.images}
+                    tags={consts.MEMORYWAVE_INFO.tags}
                 />
 
                 <ProjectCard
@@ -47,6 +49,7 @@ class Projects extends Component {
                     description={consts.HFOLD_INFO.description}
                     githubLink={consts.HFOLD_INFO.githubLink}
                     source={consts.HFOLD_INFO.images}
+                    tags={consts.HFOLD_INFO.tags}
                 />
 
                 <ProjectCard
@@ -55,6 +58,7 @@ class Projects extends Component {
                     githubLink={consts.FEELTRIP_INFO.githubLink}
                     demoLink={consts.FEELTRIP_INFO.demoLink}
                     source={consts.FEELTRIP_INFO.images}
+                    tags={consts.FEELTRIP_INFO.tags}
                 />
             </Grid>
 

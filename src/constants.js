@@ -40,6 +40,7 @@ export const GITFRIENDS_INFO = {
     description: "GitFriends is a Distributed Social Networking web application for a university project with 5 members. Each team has to connect with other team's server and share information. This allows users to create posts and friend other users from a different server.",
     demoLink: "https://youtu.be/ur7otnh1ztc",
     githubLink: "https://github.com/forgeno/CMPUT404-group-project/",
+    tags: ["React", "Django", "TDD", "Continuous Integration"],
     images: [
         {
             label: 'Login',
@@ -76,6 +77,7 @@ export const OUTDOORS_INFO = {
     title: "Inventory Management and Rentals System",
     description: "This project is built for the University of Alberta Outdoors Club's with 8 members. It aims to reduce the amount of paperwork and improve the existing gear rental workflow and reducing the amount of paperwork by supporting remote rentals, supporting online payments.",
     demoLink: "https://www.youtube.com/watch?v=ClYSKNEYS-Q",
+    tags: ["React", "Django", "Continuous Integration"],
     images: [
         {
             label: 'Login',
@@ -128,6 +130,7 @@ export const FEELTRIP_INFO = {
     description: "DDDDD",
     githubLink: "https://github.com/CMPUT301W17T11/FeelTrip",
     demoLink: "https://youtu.be/Yo6Uv4B39sM",
+    tags: ["Android", "Google Maps"],
     images: [
         {
             label: 'Feed',
@@ -148,6 +151,7 @@ export const MEMORYWAVE_INFO = {
     title: "Memory Wave",
     description: "YYYYY",
     githubLink: "https://github.com/Hk-tang/MemoryWave",
+    tags: ["C#", "Unity"],
     images: [
         {
             label: 'Start Screen',
@@ -168,6 +172,7 @@ export const HFOLD_INFO = {
     title: "HFold (iterative / interacting)",
     description: "XXXXXXXXXXX",
     githubLink: "https://github.com/HosnaJabbari",
+    tags: ["Dynamic Programming", "C++"],
     images: [
         {
             label: 'Examples of loops',
