@@ -30,6 +30,8 @@ import memoryMenu2 from "./assets/memory-wave/menu2.png";
 import memoryGame from "./assets/memory-wave/game.png";
 
 import feelTripFeed from "./assets/feeltrip/feed.png";
+import feelTripMap from "./assets/feeltrip/map.png";
+import feelTripCreate from "./assets/feeltrip/create-post.png";
 
 
 
@@ -130,6 +132,14 @@ export const FEELTRIP_INFO = {
         {
             label: 'Feed',
             imgPath: feelTripFeed,
+        },
+        {
+            label: 'Create a Post',
+            imgPath: feelTripCreate,
+        },
+        {
+            label: 'Google Map',
+            imgPath: feelTripMap,
         }
     ]
 };
