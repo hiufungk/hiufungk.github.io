@@ -12,21 +12,19 @@ import CardActions from "@material-ui/core/CardActions/CardActions";
 import IconButton from "@material-ui/core/IconButton/IconButton";
 import CardContent from "@material-ui/core/CardContent/CardContent";
 import Tooltip from "@material-ui/core/Tooltip/Tooltip";
+import Chip from '@material-ui/core/Chip';
+import Paper from '@material-ui/core/Paper';
+
+import "./css/TopNavBar.css"
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = theme => ({
     root: {
+        marginTop: "4%",
         maxWidth: 400,
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
-    },
-    header: {
-        display: 'flex',
-        alignItems: 'center',
-        height: 50,
-        paddingLeft: theme.spacing.unit * 4,
-        backgroundColor: theme.palette.background.default,
     },
     img: {
         height: 255,
@@ -45,6 +43,7 @@ class ProjectCard extends Component {
             activeStep: 0,
         };
         this.getGithubButton = this.getGithubButton.bind(this);
+        this.getChips = this.getChips.bind(this);
     }
 
 
@@ -80,20 +79,29 @@ class ProjectCard extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <IconButton onclick="window.location.href='b.php'">
+                <IconButton>
                     <i className="fab fa-github"/>
                 </IconButton>
             </a>
         );
     }
 
+    getChips() {
+        if (this.props.chips) {
+            return (
+                this.props.chips.map((value) => (
+                        <Chip label={value} color="secondary"/>
+                        ))
+            );
+        }
+    }
+
     render() {
         const {classes, theme, source} = this.props;
         const {activeStep} = this.state;
         const maxSteps = source.length;
-
         return (
-            <div className={classes.root}>
+            <Paper className={classes.root}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {this.props.title}
@@ -151,7 +159,10 @@ class ProjectCard extends Component {
                         </Button>
                     </a>
                 </CardActions>
-            </div>
+                <CardActions>
+                    {this.getChips()}
+                </CardActions>
+            </Paper>
         );
     }
 }
@@ -165,6 +176,7 @@ ProjectCard.propTypes = {
     demoLink: PropTypes.string,
     githubLink: PropTypes.string,
     isPrivate: PropTypes.bool,
+    chips: PropTypes.array
 };
 
 export default withStyles(styles, {withTheme: true})(ProjectCard);
