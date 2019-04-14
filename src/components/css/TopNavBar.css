@@ -1,0 +1,17 @@
+.github {
+    color: white;
+}
+
+.github:hover {
+    color: black;
+    background-color: transparent !important;
+}
+
+.linkedin {
+    color: white;
+}
+
+.linkedin:hover {
+    color: black;
+    background-color: transparent !important;
+}
