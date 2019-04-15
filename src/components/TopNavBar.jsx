@@ -19,8 +19,6 @@ class TopNavBar extends Component {
                         <NavLink className="nav-link" to="/home">Home</NavLink>
                         <NavLink className="nav-link"
                                  to="/projects">Projects</NavLink>
-                        <NavLink className="nav-link" to="/about-me">About
-                            Me</NavLink>
                     </Nav>
                     <a
                         href="http://github.com/hiufungk/"
