@@ -35,17 +35,26 @@ class Home extends Component {
         this.setState({tabValue: value});
     };
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevState.hash !== window.location.hash) {
+            this.setState({
+               hash:  window.location.hash,
+                tabValue: window.location.hash === "#work-exp" ? 1 : 0
+            });
+        }
+    }
+
     render() {
         const {classes} = this.props;
         const {tabValue} = this.state;
         return (
             <div>
                 <TopProfile/>
-                <div className={classes.root}>
+                <div className={classes.root} >
                     <AppBar position="static">
                         <Tabs value={tabValue} onChange={this.handleChange}>
-                            <Tab label="About Me"/>
-                            <Tab label="Work Experience"/>
+                            <Tab label="About Me" id="about-me"/>
+                            <Tab label="Work Experience" id="work-exp"/>
                         </Tabs>
                     </AppBar>
                     {tabValue === 0 &&
