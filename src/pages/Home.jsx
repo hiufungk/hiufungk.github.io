@@ -6,6 +6,9 @@ import Tab from "@material-ui/core/Tab/Tab";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import withStyles from "@material-ui/core/es/styles/withStyles";
 import ProfileCard from "../components/ProfileCard";
+import WorkExpCard from "../components/WorkExpCard";
+
+import unilogo from "../assets/uofa_logo2.png"
 
 const styles = theme => ({
     root: {
@@ -45,8 +48,23 @@ class Home extends Component {
                             <Tab label="Work Experience"/>
                         </Tabs>
                     </AppBar>
-                    {tabValue === 0 && <TabContainer><ProfileCard/></TabContainer>}
-                    {tabValue === 1 && <TabContainer>Item Two</TabContainer>}
+                    {tabValue === 0 &&
+                        <TabContainer>
+                            <WorkExpCard
+                                logo={unilogo}
+                                companyName={"Ingenuity Lab"}
+                                jobTitle={"Research Assistant/Software Developer"}
+                                link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                            />
+                            ===============
+                            <ProfileCard/>
+                        </TabContainer>
+                    }
+                    {tabValue === 1 &&
+                        <TabContainer>
+                            aaa
+                        </TabContainer>
+                    }
                 </div>
             </div>
         )
