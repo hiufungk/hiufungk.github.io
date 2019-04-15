@@ -5,10 +5,6 @@ import Grid from "@material-ui/core/Grid/Grid";
 
 class Projects extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <Grid
