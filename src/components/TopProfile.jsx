@@ -41,7 +41,8 @@ const styles = theme => ({
 class TopProfile extends Component {
 
     handleEmailClick() {
-        window.open("mailto: hiufungk@ualberta.ca");
+        let win = window.open("mailto: hiufungk@ualberta.ca");
+        win.close();
     }
 
     render() {
@@ -73,7 +74,6 @@ class TopProfile extends Component {
                         <Chip
                             avatar={<Avatar><Phone /></Avatar>}
                             label="+1 (780) 710 - 4524"
-                            onClick={this.handleClick}
                             className={classes.chip}
                             color="primary"
                         />
