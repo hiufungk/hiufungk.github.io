@@ -35,10 +35,17 @@ class Home extends Component {
         this.setState({tabValue: value});
     };
 
+    componentDidMount() {
+        this.setState({
+            hash:  window.location.hash,
+            tabValue: window.location.hash === "#work-exp" ? 1 : 0
+        });
+    }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         if(prevState.hash !== window.location.hash) {
             this.setState({
-               hash:  window.location.hash,
+                hash:  window.location.hash,
                 tabValue: window.location.hash === "#work-exp" ? 1 : 0
             });
         }
@@ -72,6 +79,24 @@ class Home extends Component {
                     {tabValue === 1 &&
                         <TabContainer>
                             aaa
+                            <WorkExpCard
+                                logo={unilogo}
+                                companyName={"Ingenuity Lab"}
+                                jobTitle={"Research Assistant/Software Developer"}
+                                link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                            />
+                            <WorkExpCard
+                                logo={unilogo}
+                                companyName={"Ingenuity Lab"}
+                                jobTitle={"Research Assistant/Software Developer"}
+                                link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                            />
+                            <WorkExpCard
+                                logo={unilogo}
+                                companyName={"Ingenuity Lab"}
+                                jobTitle={"Research Assistant/Software Developer"}
+                                link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                            />
                         </TabContainer>
                     }
                 </div>
