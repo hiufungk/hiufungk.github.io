@@ -1,0 +1,47 @@
+.vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+    left: 140%;
+    color: yellow !important;
+}
+
+.vertical-timeline::before {
+    background-color: red;
+}
+
+ @media only screen and (min-width: 700px) {
+     .vertical-timeline--two-columns .vertical-timeline-element-content::before {
+         border-left-color: hotpink;
+     }
+ }
+
+.vertical-timeline-element-content {
+    background-color: blue;
+    box-shadow: 0 3px 0 #e39d2b;
+}
+
+.vertical-timeline-element-content::before {
+    border-right-color: #96f255;
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(2n):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+    border-right-color: green;
+}
+
+.vertical-timeline-element-icon {
+    box-shadow: 0 0 0 4px #f47eff
+}
+
+@media only screen and (min-width: 700px) {
+    .left-card-date {
+        color: mediumpurple;
+        margin-left: 150%
+    }
+}
+
+ @media only screen and (min-width: 700px) {
+     .right-card-date {
+         position: absolute;
+         color: mediumpurple;
+         right: 1%;
+         margin-right: 140%;
+     }
+ }

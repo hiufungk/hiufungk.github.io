@@ -13,6 +13,7 @@ import ingenuityLogo from "../assets/ingenuity_logo.png"
 import hostlinkLogo from "../assets/hostlink_logo.png"
 
 import Grid from "@material-ui/core/Grid/Grid";
+import Timeline from "../components/Timeline";
 
 const styles = theme => ({
     root: {
@@ -75,37 +76,38 @@ class Home extends Component {
                     }
                     {tabValue === 1 &&
                         <TabContainer>
-                            <Grid container className={classes.root}>
-        <Grid item xs={12}>
-          <Grid
-            container
-            spacing={16}
-            // className={classes.demo}
-            alignItems={"center"}
-            direction={"column"}
-            justify={"center"}
-          >
-                            <WorkExpCard
-                                logo={ingenuityLogo}
-                                companyName={"Ingenuity Lab"}
-                                jobTitle={"Research Assistant/Software Developer"}
-                                link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
-                            />
-                            <WorkExpCard
-                                logo={hostlinkLogo}
-                                companyName={"HostLink (HK)"}
-                                jobTitle={"Research Assistant/Software Developer"}
-                                link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
-                            />
-                            <WorkExpCard
-                                logo={vbahkLogo}
-                                companyName={"Volleyball Association of Hong Kong"}
-                                jobTitle={"Research Assistant/Software Developer"}
-                                link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
-                            />
-                            </Grid>
-        </Grid>
-                            </Grid>
+                            {/*<Grid container className={classes.root}>*/}
+                                {/*<Grid item xs={12}>*/}
+                                    {/*<Grid*/}
+                                        {/*container*/}
+                                        {/*spacing={16}*/}
+                                        {/*// className={classes.demo}*/}
+                                        {/*alignItems={"center"}*/}
+                                        {/*direction={"column"}*/}
+                                        {/*justify={"center"}*/}
+                                    {/*>*/}
+                                        {/*<WorkExpCard*/}
+                                            {/*logo={ingenuityLogo}*/}
+                                            {/*companyName={"Ingenuity Lab"}*/}
+                                            {/*jobTitle={"Research Assistant/Software Developer"}*/}
+                                            {/*link={"https://www.linkedin.com/company/ingenuity-lab/about/"}*/}
+                                        {/*/>*/}
+                                        {/*<WorkExpCard*/}
+                                            {/*logo={hostlinkLogo}*/}
+                                            {/*companyName={"HostLink (HK)"}*/}
+                                            {/*jobTitle={"Research Assistant/Software Developer"}*/}
+                                            {/*link={"https://www.linkedin.com/company/ingenuity-lab/about/"}*/}
+                                        {/*/>*/}
+                                        {/*<WorkExpCard*/}
+                                            {/*logo={vbahkLogo}*/}
+                                            {/*companyName={"Volleyball Association of Hong Kong"}*/}
+                                            {/*jobTitle={"Research Assistant/Software Developer"}*/}
+                                            {/*link={"https://www.linkedin.com/company/ingenuity-lab/about/"}*/}
+                                        {/*/>*/}
+                                    {/*</Grid>*/}
+                                {/*</Grid>*/}
+                            {/*</Grid>*/}
+                            <Timeline/>
                         </TabContainer>
                     }
                 </div>
