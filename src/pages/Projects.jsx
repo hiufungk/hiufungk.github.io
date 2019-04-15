@@ -9,6 +9,8 @@ class Projects extends Component {
             <Grid
                 container
                 spacing={8}
+                item
+                xs={12}
                 direction="row"
                 justify="space-evenly"
             >
