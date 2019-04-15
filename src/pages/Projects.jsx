@@ -4,13 +4,11 @@ import * as consts from "../constants.js";
 import Grid from "@material-ui/core/Grid/Grid";
 
 class Projects extends Component {
-
     render() {
         return (
             <Grid
                 container
                 spacing={8}
-                xs={12}
                 direction="row"
                 justify="space-evenly"
             >

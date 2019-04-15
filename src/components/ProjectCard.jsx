@@ -91,7 +91,7 @@ class ProjectCard extends Component {
         if (this.props.tags) {
             return (
                 this.props.tags.map((value) => (
-                        <Chip label={value} color="secondary"/>
+                        <Chip key={value} label={value} color="secondary"/>
                         ))
             );
         }

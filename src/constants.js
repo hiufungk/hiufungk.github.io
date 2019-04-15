@@ -44,7 +44,7 @@ export const GITFRIENDS_INFO = {
     tags: ["React", "Django", "TDD", "Continuous Integration"],
     images: [
         {
-            label: 'Login',
+            label: 'GitFriends Login',
             imgPath: gitFriendsLoginImage,
         },
         {
@@ -85,7 +85,7 @@ export const OUTDOORS_INFO = {
     tags: ["React", "Django", "Continuous Integration"],
     images: [
         {
-            label: 'Login',
+            label: 'Outdoors Club Login',
             imgPath: outdoorsLoginImage,
         },
         {
