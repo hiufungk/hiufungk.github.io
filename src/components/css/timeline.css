@@ -1,38 +1,45 @@
-.vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
-    left: 140%;
-    color: yellow !important;
+/*.vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {*/
+    /*left: 140%;*/
+    /*color: yellow !important;*/
+/*}*/
+
+:root {
+    --bg-colour: blue;
+    --timeline-colour: red;
+    --date-text-colour: mediumpurple;
 }
 
 .vertical-timeline::before {
-    background-color: red;
+    background-color: var(--timeline-colour);
 }
+
 
  @media only screen and (min-width: 700px) {
      .vertical-timeline--two-columns .vertical-timeline-element-content::before {
-         border-left-color: hotpink;
+         border-left-color: var(--bg-colour);
      }
  }
 
 .vertical-timeline-element-content {
-    background-color: blue;
+    background-color: var(--bg-colour);
     box-shadow: 0 3px 0 #e39d2b;
 }
 
 .vertical-timeline-element-content::before {
-    border-right-color: #96f255;
+    border-right-color: var(--bg-colour);
 }
 
 .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(2n):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
-    border-right-color: green;
+    border-right-color: var(--bg-colour);
 }
 
 .vertical-timeline-element-icon {
-    box-shadow: 0 0 0 4px #f47eff
+    box-shadow: 0 0 0 4px var(--timeline-colour);
 }
 
 @media only screen and (min-width: 700px) {
     .left-card-date {
-        color: mediumpurple;
+        color: var(--date-text-colour);
         margin-left: 150%
     }
 }
@@ -40,7 +47,7 @@
  @media only screen and (min-width: 700px) {
      .right-card-date {
          position: absolute;
-         color: mediumpurple;
+         color: var(--date-text-colour);
          right: 1%;
          margin-right: 140%;
      }
