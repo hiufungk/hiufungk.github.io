@@ -51,14 +51,15 @@ class TopProfile extends Component {
             <div className={classes.root}>
                 <Paper className={classes.paper}>
                     <Avatar alt="Kevin Chang" src={profilePic} className={classes.avatar} />
-                     <Typography align="center" variant="h4">
+                     <Typography align="center" variant="h4" gutterBottom>
                         Kevin Chang
                     </Typography>
                     {/*<Typography align="center" variant="body1">*/}
                         {/*<img src={uofaLogo} alt="University of Alberta" height="80" width="80"></img>*/}
                     {/*</Typography>*/}
-                    <Typography align="center" variant="body1" color="textSecondary">
-                        <img src={uofaLogo} alt="University of Alberta" height="80" width="80"></img> BSc with Specialization Computing Science – Software Practice
+                    <Typography align="center" variant="body1" color="textSecondary" gutterBottom>
+                        {/*<img src={uofaLogo} alt="University of Alberta" height="80" width="80"></img> */}
+                        BSc with Specialization Computing Science – Software Practice
                     </Typography>
                     {/*<Typography variant="body1" gutterBottom>*/}
                         {/*Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum*/}
