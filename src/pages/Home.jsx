@@ -6,13 +6,6 @@ import Tab from "@material-ui/core/Tab/Tab";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import withStyles from "@material-ui/core/es/styles/withStyles";
 import ProfileCard from "../components/ProfileCard";
-import WorkExpCard from "../components/WorkExpCard";
-
-import vbahkLogo from "../assets/vbahk_logo.jpg"
-import ingenuityLogo from "../assets/ingenuity_logo.png"
-import hostlinkLogo from "../assets/hostlink_logo.png"
-
-import Grid from "@material-ui/core/Grid/Grid";
 import Timeline from "../components/Timeline";
 
 const styles = theme => ({
@@ -76,37 +69,6 @@ class Home extends Component {
                     }
                     {tabValue === 1 &&
                         <TabContainer>
-                            {/*<Grid container className={classes.root}>*/}
-                                {/*<Grid item xs={12}>*/}
-                                    {/*<Grid*/}
-                                        {/*container*/}
-                                        {/*spacing={16}*/}
-                                        {/*// className={classes.demo}*/}
-                                        {/*alignItems={"center"}*/}
-                                        {/*direction={"column"}*/}
-                                        {/*justify={"center"}*/}
-                                    {/*>*/}
-                                        {/*<WorkExpCard*/}
-                                            {/*logo={ingenuityLogo}*/}
-                                            {/*companyName={"Ingenuity Lab"}*/}
-                                            {/*jobTitle={"Research Assistant/Software Developer"}*/}
-                                            {/*link={"https://www.linkedin.com/company/ingenuity-lab/about/"}*/}
-                                        {/*/>*/}
-                                        {/*<WorkExpCard*/}
-                                            {/*logo={hostlinkLogo}*/}
-                                            {/*companyName={"HostLink (HK)"}*/}
-                                            {/*jobTitle={"Research Assistant/Software Developer"}*/}
-                                            {/*link={"https://www.linkedin.com/company/ingenuity-lab/about/"}*/}
-                                        {/*/>*/}
-                                        {/*<WorkExpCard*/}
-                                            {/*logo={vbahkLogo}*/}
-                                            {/*companyName={"Volleyball Association of Hong Kong"}*/}
-                                            {/*jobTitle={"Research Assistant/Software Developer"}*/}
-                                            {/*link={"https://www.linkedin.com/company/ingenuity-lab/about/"}*/}
-                                        {/*/>*/}
-                                    {/*</Grid>*/}
-                                {/*</Grid>*/}
-                            {/*</Grid>*/}
                             <Timeline/>
                         </TabContainer>
                     }
