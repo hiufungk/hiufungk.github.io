@@ -7,23 +7,25 @@ import {
     VerticalTimeline,
     VerticalTimelineElement
 } from 'react-vertical-timeline-component';
-// import 'react-vertical-timeline-component/style.min.css';
 import vbahkLogo from "../assets/vbahk_logo.jpg";
 import WorkExpCard from "./WorkExpCard";
 
-import "./css/timeline2.css"
-// import "./css/timeline.css"
+import "./css/Timeline2.css"
 import ingenuityLogo from "../assets/ingenuity_logo.png";
 import hostlinkLogo from "../assets/hostlink_logo.png";
 import uniLogo from "../assets/uofa_logo2.png"
 import mcmathLogo from "../assets/mcmath_logo.jpg"
 import sjcLogo from "../assets/sjc_logo.jpg"
 
+// DO NOT IMPORT THIS
+// This is the original css for the timeline, we made a copy
+// and modified it as css/Timeline2.css
+// import 'react-vertical-timeline-component/style.min.css';
+
 class Timeline extends Component {
 
     render() {
         return (
-
             <VerticalTimeline>
                 <div className="aabcd">
                     <VerticalTimelineElement

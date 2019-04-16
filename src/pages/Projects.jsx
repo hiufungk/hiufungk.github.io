@@ -2,11 +2,21 @@ import React, {Component} from 'react';
 import ProjectCard from "../components/ProjectCard";
 import * as consts from "../constants.js";
 import Grid from "@material-ui/core/Grid/Grid";
+import {withStyles} from "@material-ui/core";
+
+const styles = theme => ({
+    row: {
+        margin: theme.spacing.unit,
+    }
+});
 
 class Projects extends Component {
+
     render() {
+        const {classes} = this.props;
         return (
             <Grid
+                className={classes.row}
                 container
                 spacing={8}
                 item
@@ -62,4 +72,4 @@ class Projects extends Component {
     }
 }
 
-export default Projects;
+export default withStyles(styles, {withTheme: true})(Projects);

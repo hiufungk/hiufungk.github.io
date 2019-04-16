@@ -16,10 +16,10 @@ const styles = theme => ({
     },
     avatar: {
         display: "block",
-        margin: "2% auto 2% auto",
+        margin: "5% auto 0 auto",
         width: 90,
         height: 90,
-    },
+    }
 });
 
 class WorkExpCard extends Component {
@@ -39,6 +39,11 @@ class WorkExpCard extends Component {
             title +=  "-" + this.props.jobTitle
         }
         return (title);
+    }
+
+    componentDidMount() {
+        document.documentElement.style.setProperty("--card-background-colour",
+            this.props.theme.palette.background.paper);
     }
 
     render() {
@@ -68,7 +73,7 @@ WorkExpCard.propTypes = {
     theme: PropTypes.object,
     logo: PropTypes.string.isRequired,
     companyName: PropTypes.string.isRequired,
-    jobTitle: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string,
     link: PropTypes.string.isRequired,
 };
 

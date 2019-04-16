@@ -22,7 +22,7 @@ const styles = theme => ({
         width: "80%",
         marginTop: theme.spacing.unit * 2,
         flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
+        // backgroundColor: theme.palette.background.paper,
     },
 });
 
