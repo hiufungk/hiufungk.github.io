@@ -8,7 +8,6 @@ import Avatar from "@material-ui/core/Avatar/Avatar";
 import { Phone, Email } from "@material-ui/icons";
 import backgroundImage from "../assets/profile_background.jpg"
 import profilePic from "../assets/profile.png"
-import uofaLogo from "../assets/uofa_logo.png"
 import Grid from "@material-ui/core/Grid/Grid";
 
 const styles = theme => ({
@@ -45,6 +44,11 @@ class TopProfile extends Component {
         win.close();
     }
 
+    handlePhoneClick() {
+        let win = window.open("tel:+17807104524");
+        win.close();
+    }
+
     render() {
         const {classes} = this.props;
         return (
@@ -76,6 +80,7 @@ class TopProfile extends Component {
                             avatar={<Avatar><Phone /></Avatar>}
                             label="+1 (780) 710 - 4524"
                             className={classes.chip}
+                            onClick={this.handlePhoneClick}
                             color="primary"
                         />
                         <Chip
