@@ -47,7 +47,6 @@ class Timeline extends Component {
                     </VerticalTimelineElement>
                 </div>
                 <VerticalTimelineElement
-                    // className="vertical-timeline-element--education"
                     date="2011 - present"
                     iconStyle={{
                         background: 'rgb(33, 150, 243)',
@@ -62,7 +61,6 @@ class Timeline extends Component {
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    // className="vertical-timeline-element--work"
                     date="2010 - 2011"
                     iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
                     icon={<WorkIcon/>}
@@ -94,13 +92,10 @@ class Timeline extends Component {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                     // className="vertical-timeline-element--education"
-                    // date="2011 - present"
+                    date="2011 - present"
                     iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
                     icon={<WorkIcon/>}
                 >
-                    <div className="left-card-date">
-                        aaaaaaaaaaaaa
-                    </div>
                     <WorkExpCard
                         logo={vbahkLogo}
                         companyName={"Volleyball Association of Hong Kong"}
@@ -109,7 +104,6 @@ class Timeline extends Component {
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    // className="vertical-timeline-element--education"
                     date="2011 - present"
                     iconStyle={{
                         background: 'rgb(33, 150, 243)',

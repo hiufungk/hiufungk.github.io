@@ -2,16 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Chip from '@material-ui/core/Chip';
-import Paper from '@material-ui/core/Paper';
 import Avatar from "@material-ui/core/Avatar/Avatar";
-import {Phone, Email} from "@material-ui/icons";
-import backgroundImage from "../assets/profile_background.jpg"
-import profilePic from "../assets/profile.png"
-import uofaLogo from "../assets/uofa_logo.png"
-import Grid from "@material-ui/core/Grid/Grid";
 import Card from "@material-ui/core/Card/Card";
-import CardMedia from "@material-ui/core/CardMedia/CardMedia";
 import CardContent from "@material-ui/core/CardContent/CardContent";
 import CardActionArea from "@material-ui/core/CardActionArea/CardActionArea";
 

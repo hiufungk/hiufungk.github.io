@@ -4,13 +4,6 @@ import {withStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
-import Avatar from "@material-ui/core/Avatar/Avatar";
-import { Phone, Email } from "@material-ui/icons";
-import backgroundImage from "../assets/profile_background.jpg"
-import profilePic from "../assets/profile.png"
-import uofaLogo from "../assets/uofa_logo.png"
-import Grid from "@material-ui/core/Grid/Grid";
-import CardHeader from "@material-ui/core/CardHeader/CardHeader";
 import Divider from "@material-ui/core/Divider/Divider";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel/ExpansionPanel";
 import ExpansionPanelSummary
@@ -20,26 +13,6 @@ import ExpansionPanelDetails
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const styles = theme => ({
-    // root: {
-    //     display: "flex",
-    //     justifyContent: "center",
-    //     marginTop: theme.spacing.unit * 2,
-    // },
-    // paper: {
-    //     width: "80%",
-    //     backgroundImage: "url("+backgroundImage+")",
-    //     backgroundPosition: "center",
-    //     backgroundRepeat: "no-repeat",
-    //     backgroundSize: "cover",
-    //     paddingLeft: "15%",
-    //     paddingRight: "15%",
-    // },
-    // avatar: {
-    //     display: "block",
-    //     margin: "2% auto 2% auto",
-    //     width: 90,
-    //     height: 90,
-    // },
     chip: {
         margin: theme.spacing.unit,
     }
