@@ -25,11 +25,25 @@ class Projects extends Component {
                 justify="space-evenly"
             >
                 <ProjectCard
+                    title={"TEST"}
+                    description={consts.GITFRIENDS_INFO.description}
+                    githubLink={consts.GITFRIENDS_INFO.githubLink}
+                    tags={consts.GITFRIENDS_INFO.tags}
+                />
+
+                <ProjectCard
                     title={consts.GITFRIENDS_INFO.title}
                     description={consts.GITFRIENDS_INFO.description}
                     demoLink={consts.GITFRIENDS_INFO.demoLink}
                     githubLink={consts.GITFRIENDS_INFO.githubLink}
                     source={consts.GITFRIENDS_INFO.images}
+                    tags={consts.GITFRIENDS_INFO.tags}
+                />
+
+                <ProjectCard
+                    title={"402 paper"}
+                    description={consts.GITFRIENDS_INFO.description}
+                    githubLink={consts.GITFRIENDS_INFO.githubLink}
                     tags={consts.GITFRIENDS_INFO.tags}
                 />
 
@@ -48,6 +62,13 @@ class Projects extends Component {
                     githubLink={consts.MEMORYWAVE_INFO.githubLink}
                     source={consts.MEMORYWAVE_INFO.images}
                     tags={consts.MEMORYWAVE_INFO.tags}
+                />
+
+                <ProjectCard
+                    title={"466 paper"}
+                    description={consts.GITFRIENDS_INFO.description}
+                    githubLink={consts.GITFRIENDS_INFO.githubLink}
+                    tags={consts.GITFRIENDS_INFO.tags}
                 />
 
                 <ProjectCard
