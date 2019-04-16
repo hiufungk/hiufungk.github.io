@@ -50,6 +50,17 @@ class ProfileCard extends Component {
                         <Chip label={"aaaaaaaaaaaaaaaaaaa"} color="secondary" className={classes.chip}/>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
+                <ExpansionPanel defaultExpanded>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography>Languages</Typography>
+                    </ExpansionPanelSummary>
+                    <Divider/>
+                    <ExpansionPanelDetails>
+                        <Chip label={"English"} color="secondary" className={classes.chip}/>
+                        <Chip label={"Cantonese"} color="secondary" className={classes.chip}/>
+                        <Chip label={"Mandarin"} color="secondary" className={classes.chip}/>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
 
                 </Paper>
             </div>
