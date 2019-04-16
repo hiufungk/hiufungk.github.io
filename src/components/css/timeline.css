@@ -6,6 +6,7 @@
 :root {
     --bg-colour: blue;
     --timeline-colour: red;
+    --timeline-circle-border-colour: yellow;
     --date-text-colour: mediumpurple;
 }
 
@@ -13,6 +14,9 @@
     background-color: var(--timeline-colour);
 }
 
+.vertical-timeline--two-columns .vertical-timeline-element-content {
+    padding: 0;
+}
 
  @media only screen and (min-width: 700px) {
      .vertical-timeline--two-columns .vertical-timeline-element-content::before {
@@ -34,11 +38,12 @@
 }
 
 .vertical-timeline-element-icon {
-    box-shadow: 0 0 0 4px var(--timeline-colour);
+    box-shadow: 0 0 0 4px var(--timeline-circle-border-colour);
 }
 
 @media only screen and (min-width: 700px) {
     .left-card-date {
+        position: absolute;
         color: var(--date-text-colour);
         margin-left: 150%
     }

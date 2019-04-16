@@ -18,8 +18,9 @@ import CardActionArea from "@material-ui/core/CardActionArea/CardActionArea";
 const styles = theme => ({
     card: {
         // maxWidth: 345,
-        width: "80%",
-        marginTop: theme.spacing.unit * 2,
+        // width: "80%",
+        // marginTop: theme.spacing.unit * 2,
+        // background: "transparent"
     },
     avatar: {
         display: "block",
@@ -33,10 +34,19 @@ class WorkExpCard extends Component {
     constructor(props) {
         super(props);
         this.onClick = this.onClick.bind(this);
+        this.getTitle = this.getTitle.bind(this);
     }
 
     onClick() {
         window.open(this.props.link)
+    }
+
+    getTitle() {
+        let title = this.props.companyName;
+        if(this.props.jobTitle) {
+            title +=  "-" + this.props.jobTitle
+        }
+        return (title);
     }
 
     render() {
@@ -46,8 +56,8 @@ class WorkExpCard extends Component {
                 <CardActionArea onClick={this.onClick}>
                 <Avatar src={this.props.logo} className={classes.avatar} />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {this.props.companyName} - {this.props.jobTitle}
+                    <Typography gutterBottom variant="h5" component="h2" align="center">
+                        {this.getTitle()}
                     </Typography>
                     <Typography component="p">
                         Lizards are a widespread group of squamate reptiles,
