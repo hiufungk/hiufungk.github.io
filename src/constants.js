@@ -137,7 +137,7 @@ export const OUTDOORS_INFO = {
 
 export const FEELTRIP_INFO = {
     title: "FeelTrip",
-    description: "DDDDD",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/CMPUT301W17T11/FeelTrip",
     demoLink: "https://youtu.be/Yo6Uv4B39sM",
     tags: ["Android", "Google Maps"],
@@ -159,7 +159,7 @@ export const FEELTRIP_INFO = {
 
 export const MEMORYWAVE_INFO = {
     title: "Memory Wave",
-    description: "YYYYY",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/Hk-tang/MemoryWave",
     tags: ["C#", "Unity"],
     images: [
@@ -180,7 +180,7 @@ export const MEMORYWAVE_INFO = {
 
 export const HFOLD_INFO = {
     title: "HFold (iterative / interacting)",
-    description: "XXXXXXXXXXX",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/HosnaJabbari",
     tags: ["Dynamic Programming", "C++"],
     images: [
@@ -201,7 +201,7 @@ export const HFOLD_INFO = {
 
 export const BLACK_FRIDAY_INFO = {
     title: "Black Friday Sales Prediction",
-    description: "XXXXXXXXXXX",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/hiufungk/BlackFridayPrediction",
     tags: ["Machine Learning"],
     images: [
@@ -218,7 +218,7 @@ export const BLACK_FRIDAY_INFO = {
 
 export const PAPER_402_INFO = {
     title: "Investigating the Relationship Between Testing and Pull Requests",
-    description: "XXXXXXXXXXX",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/cmput402-w19/project-Team8",
     tags: ["Software Quality", "Testing"],
     images: [
