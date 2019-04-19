@@ -7,16 +7,43 @@ import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 import { HashLink } from "react-router-hash-link";
 
 class TopNavBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            navExpanded: false
+        };
+        this.toggleNav = this.toggleNav.bind(this);
+        this.collapseNav = this.collapseNav.bind(this);
+    }
+
+    toggleNav() {
+        this.setState({
+            navExpanded: !this.state.navExpanded
+        });
+    }
+
+    collapseNav() {
+        this.setState({
+            navExpanded: false
+        });
+    }
 
     render() {
         return (
-            <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+            <Navbar
+                collapseOnSelect
+                expanded={this.state.navExpanded}
+                onToggle={this.toggleNav}
+                expand="lg"
+                bg="primary"
+                variant="dark"
+            >
                 <Navbar.Brand href="/">
                     Kevin Chang
                 </Navbar.Brand>
                 <Navbar.Toggle/>
                 <Navbar.Collapse>
-                    <Nav className="mr-auto">
+                    <Nav className="mr-auto" onClick={this.collapseNav}>
                         <NavLink className="nav-link" to="/home">Home</NavLink>
                         <NavLink className="nav-link" to="/projects">
                             Projects
