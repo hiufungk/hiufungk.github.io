@@ -34,6 +34,11 @@ import feelTripFeed from "./assets/feeltrip/feed.png";
 import feelTripMap from "./assets/feeltrip/map.png";
 import feelTripCreate from "./assets/feeltrip/create-post.png";
 
+import blackFridayDataImage from "./assets/black-friday/dataset.png"
+import blackFridayAlgComp from "./assets/black-friday/alg_compare.png"
+
+import scatterplot from "./assets/paper_402/overall_scatter_plot.png"
+import paper_402 from "./assets/paper_402/paper.png"
 
 
 export const GITFRIENDS_INFO = {
@@ -190,6 +195,40 @@ export const HFOLD_INFO = {
         {
             label: 'Example',
             imgPath: hfoldText,
+        }
+    ]
+};
+
+export const BLACK_FRIDAY_INFO = {
+    title: "Black Friday Sales Prediction",
+    description: "XXXXXXXXXXX",
+    githubLink: "https://github.com/hiufungk/BlackFridayPrediction",
+    tags: ["Machine Learning"],
+    images: [
+        {
+            label: 'Kaggle Dataset',
+            imgPath: blackFridayDataImage,
+        },
+        {
+            label: 'Algorithm Comparison',
+            imgPath: blackFridayAlgComp,
+        }
+    ]
+};
+
+export const PAPER_402_INFO = {
+    title: "Investigating the Relationship Between Testing and Pull Requests",
+    description: "XXXXXXXXXXX",
+    githubLink: "https://github.com/cmput402-w19/project-Team8",
+    tags: ["Software Quality", "Testing"],
+    images: [
+        {
+            label: 'Overall Scatterplot',
+            imgPath: scatterplot,
+        },
+        {
+            label: 'Research Paper',
+            imgPath: paper_402,
         }
     ]
 };

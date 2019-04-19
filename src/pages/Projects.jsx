@@ -41,10 +41,11 @@ class Projects extends Component {
                 />
 
                 <ProjectCard
-                    title={"402 paper"}
-                    description={consts.GITFRIENDS_INFO.description}
-                    githubLink={consts.GITFRIENDS_INFO.githubLink}
-                    tags={consts.GITFRIENDS_INFO.tags}
+                    title={consts.PAPER_402_INFO.title}
+                    description={consts.PAPER_402_INFO.description}
+                    githubLink={consts.PAPER_402_INFO.githubLink}
+                    source={consts.PAPER_402_INFO.images}
+                    tags={consts.PAPER_402_INFO.tags}
                 />
 
                 <ProjectCard
@@ -65,10 +66,11 @@ class Projects extends Component {
                 />
 
                 <ProjectCard
-                    title={"466 paper"}
-                    description={consts.GITFRIENDS_INFO.description}
-                    githubLink={consts.GITFRIENDS_INFO.githubLink}
-                    tags={consts.GITFRIENDS_INFO.tags}
+                    title={consts.BLACK_FRIDAY_INFO.title}
+                    description={consts.BLACK_FRIDAY_INFO.description}
+                    githubLink={consts.BLACK_FRIDAY_INFO.githubLink}
+                    source={consts.BLACK_FRIDAY_INFO.images}
+                    tags={consts.BLACK_FRIDAY_INFO.tags}
                 />
 
                 <ProjectCard
