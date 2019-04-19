@@ -132,21 +132,30 @@ class ProfileCard extends Component {
                     </ExpansionPanelSummary>
                     <Divider/>
                     <ExpansionPanelDetails>
-                        <Chip
-                            avatar={<Avatar><Flag code="GB"/></Avatar>}
-                            label={"English"}
-                            className={classes.chip}
-                        />
-                        <Chip
-                            avatar={<Avatar><Flag code="HK"/></Avatar>}
-                            label={"Cantonese"}
-                            className={classes.chip}
-                        />
-                        <Chip
-                            avatar={<Avatar><Flag code="CN"/></Avatar>}
-                            label={"Mandarin"}
-                            className={classes.chip}
-                        />
+                        <Grid
+                            className={classes.row}
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'row'}
+                            justify={"flex-start"}
+                        >
+                            <Chip
+                                avatar={<Avatar><Flag code="GB"/></Avatar>}
+                                label={"English"}
+                                className={classes.chip}
+                            />
+                            <Chip
+                                avatar={<Avatar><Flag code="HK"/></Avatar>}
+                                label={"Cantonese"}
+                                className={classes.chip}
+                            />
+                            <Chip
+                                avatar={<Avatar><Flag code="CN"/></Avatar>}
+                                label={"Mandarin"}
+                                className={classes.chip}
+                            />
+                        </Grid>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
 
