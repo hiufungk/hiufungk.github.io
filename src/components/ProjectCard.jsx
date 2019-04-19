@@ -16,6 +16,10 @@ import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
 
 import "./css/TopNavBar.css"
+import CardHeader from "@material-ui/core/CardHeader/CardHeader";
+import CircularProgress
+    from "@material-ui/core/CircularProgress/CircularProgress";
+import Grid from "@material-ui/core/Grid/Grid";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -33,6 +37,9 @@ const styles = theme => ({
         overflow: 'hidden',
         width: '100%',
     },
+    progress: {
+        margin: theme.spacing.unit * 2,
+    }
 });
 
 class ProjectCard extends Component {
@@ -90,63 +97,80 @@ class ProjectCard extends Component {
         if (this.props.tags) {
             return (
                 this.props.tags.map((value) => (
-                        <Chip label={value} color="secondary"/>
+                        <Chip key={value} label={value} color="secondary"/>
                         ))
             );
         }
     }
 
+    getImageCarousel(classes, theme, activeStep) {
+        if(this.props.source) {
+            const {source} = this.props;
+            const maxSteps = source.length;
+            return (
+                <div>
+                    <AutoPlaySwipeableViews
+                        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                        index={activeStep}
+                        onChangeIndex={this.handleStepChange}
+                        enableMouseEvents
+                    >
+                        {source.map((step, index) => (
+                            <div key={step.label}>
+                                {Math.abs(activeStep - index) <= 2 ? (
+                                    <img className={classes.img} src={step.imgPath}
+                                         alt={step.label}/>
+                                ) : null}
+                            </div>
+                        ))}
+                    </AutoPlaySwipeableViews>
+                    <MobileStepper
+                        steps={maxSteps}
+                        position="static"
+                        activeStep={activeStep}
+                        className={classes.mobileStepper}
+                        nextButton={
+                            <Button size="small" onClick={this.handleNext}
+                                    disabled={activeStep === maxSteps - 1}>
+                                Next
+                                {theme.direction === 'rtl' ? <KeyboardArrowLeft/> :
+                                    <KeyboardArrowRight/>}
+                            </Button>
+                        }
+                        backButton={
+                            <Button size="small" onClick={this.handleBack}
+                                    disabled={activeStep === 0}>
+                                {theme.direction === 'rtl' ? <KeyboardArrowRight/> :
+                                    <KeyboardArrowLeft/>}
+                                Back
+                            </Button>
+                        }
+                    />
+                </div>
+            );
+        }
+        return (
+            <Grid container justify="center">
+                <CircularProgress className={classes.progress} />
+            </Grid>
+        );
+    }
+
     render() {
-        const {classes, theme, source} = this.props;
-        const {activeStep} = this.state;
-        const maxSteps = source.length;
+        const {classes, theme} = this.props;
         return (
             <Paper className={classes.root}>
+                <CardHeader title={this.props.title} />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {this.props.title}
-                    </Typography>
+                    {/*<Typography gutterBottom variant="h5" component="h2">*/}
+                        {/*{this.props.title}*/}
+                    {/*</Typography>*/}
                     <Typography component="p">
                         {this.props.description}
                     </Typography>
                 </CardContent>
-                <AutoPlaySwipeableViews
-                    axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                    index={activeStep}
-                    onChangeIndex={this.handleStepChange}
-                    enableMouseEvents
-                >
-                    {source.map((step, index) => (
-                        <div key={step.label}>
-                            {Math.abs(activeStep - index) <= 2 ? (
-                                <img className={classes.img} src={step.imgPath}
-                                     alt={step.label}/>
-                            ) : null}
-                        </div>
-                    ))}
-                </AutoPlaySwipeableViews>
-                <MobileStepper
-                    steps={maxSteps}
-                    position="static"
-                    activeStep={activeStep}
-                    className={classes.mobileStepper}
-                    nextButton={
-                        <Button size="small" onClick={this.handleNext}
-                                disabled={activeStep === maxSteps - 1}>
-                            Next
-                            {theme.direction === 'rtl' ? <KeyboardArrowLeft/> :
-                                <KeyboardArrowRight/>}
-                        </Button>
-                    }
-                    backButton={
-                        <Button size="small" onClick={this.handleBack}
-                                disabled={activeStep === 0}>
-                            {theme.direction === 'rtl' ? <KeyboardArrowRight/> :
-                                <KeyboardArrowLeft/>}
-                            Back
-                        </Button>
-                    }
-                />
+                {this.getImageCarousel(classes, theme, this.state.activeStep)}
+                <CardContent>
                 <CardActions>
                     {this.getGithubButton()}
                     <a
@@ -162,6 +186,7 @@ class ProjectCard extends Component {
                 <CardActions>
                     {this.getChips()}
                 </CardActions>
+                </CardContent>
             </Paper>
         );
     }
@@ -170,7 +195,7 @@ class ProjectCard extends Component {
 ProjectCard.propTypes = {
     classes: PropTypes.object,
     theme: PropTypes.object,
-    source: PropTypes.array.isRequired,
+    source: PropTypes.array,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     demoLink: PropTypes.string,

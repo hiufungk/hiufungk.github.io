@@ -8,6 +8,7 @@ import gitFriendsFriendRequestImage
     from "./assets/git-friends/friendRequestsWithLocalAndForeign.png";
 import gitFriendsStreamImage from "./assets/git-friends/stream.png";
 import gitFriendsLoginImage from "./assets/git-friends/login.png";
+import gitFriendsGithub from "./assets/git-friends/githubActivity.png"
 
 import outdoorsLoginImage from "./assets/outdoors-club/login.png";
 import gearPageImage from "./assets/outdoors-club/gear_page.png";
@@ -33,6 +34,11 @@ import feelTripFeed from "./assets/feeltrip/feed.png";
 import feelTripMap from "./assets/feeltrip/map.png";
 import feelTripCreate from "./assets/feeltrip/create-post.png";
 
+import blackFridayDataImage from "./assets/black-friday/dataset.png"
+import blackFridayAlgComp from "./assets/black-friday/alg_compare.png"
+
+import scatterplot from "./assets/paper_402/overall_scatter_plot.png"
+import paper_402 from "./assets/paper_402/paper.png"
 
 
 export const GITFRIENDS_INFO = {
@@ -43,7 +49,7 @@ export const GITFRIENDS_INFO = {
     tags: ["React", "Django", "TDD", "Continuous Integration"],
     images: [
         {
-            label: 'Login',
+            label: 'GitFriends Login',
             imgPath: gitFriendsLoginImage,
         },
         {
@@ -70,6 +76,10 @@ export const GITFRIENDS_INFO = {
             label: 'Stream',
             imgPath: gitFriendsStreamImage,
         },
+        {
+            label: 'GitHub Integration',
+            imgPath: gitFriendsGithub,
+        },
     ]
 };
 
@@ -80,7 +90,7 @@ export const OUTDOORS_INFO = {
     tags: ["React", "Django", "Continuous Integration"],
     images: [
         {
-            label: 'Login',
+            label: 'Outdoors Club Login',
             imgPath: outdoorsLoginImage,
         },
         {
@@ -127,7 +137,7 @@ export const OUTDOORS_INFO = {
 
 export const FEELTRIP_INFO = {
     title: "FeelTrip",
-    description: "DDDDD",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/CMPUT301W17T11/FeelTrip",
     demoLink: "https://youtu.be/Yo6Uv4B39sM",
     tags: ["Android", "Google Maps"],
@@ -149,7 +159,7 @@ export const FEELTRIP_INFO = {
 
 export const MEMORYWAVE_INFO = {
     title: "Memory Wave",
-    description: "YYYYY",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/Hk-tang/MemoryWave",
     tags: ["C#", "Unity"],
     images: [
@@ -170,7 +180,7 @@ export const MEMORYWAVE_INFO = {
 
 export const HFOLD_INFO = {
     title: "HFold (iterative / interacting)",
-    description: "XXXXXXXXXXX",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     githubLink: "https://github.com/HosnaJabbari",
     tags: ["Dynamic Programming", "C++"],
     images: [
@@ -185,6 +195,40 @@ export const HFOLD_INFO = {
         {
             label: 'Example',
             imgPath: hfoldText,
+        }
+    ]
+};
+
+export const BLACK_FRIDAY_INFO = {
+    title: "Black Friday Sales Prediction",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    githubLink: "https://github.com/hiufungk/BlackFridayPrediction",
+    tags: ["Machine Learning"],
+    images: [
+        {
+            label: 'Kaggle Dataset',
+            imgPath: blackFridayDataImage,
+        },
+        {
+            label: 'Algorithm Comparison',
+            imgPath: blackFridayAlgComp,
+        }
+    ]
+};
+
+export const PAPER_402_INFO = {
+    title: "Investigating the Relationship Between Testing and Pull Requests",
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    githubLink: "https://github.com/cmput402-w19/project-Team8",
+    tags: ["Software Quality", "Testing"],
+    images: [
+        {
+            label: 'Overall Scatterplot',
+            imgPath: scatterplot,
+        },
+        {
+            label: 'Research Paper',
+            imgPath: paper_402,
         }
     ]
 };

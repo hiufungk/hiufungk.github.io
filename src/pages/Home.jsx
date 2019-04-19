@@ -1,23 +1,81 @@
 import React, {Component} from 'react';
-import Button from '@material-ui/core/Button';
+import TopProfile from "../components/TopProfile"
+import Tabs from "@material-ui/core/Tabs/Tabs";
+import TabContainer from "react-bootstrap/TabContainer";
+import Tab from "@material-ui/core/Tab/Tab";
+import AppBar from "@material-ui/core/AppBar/AppBar";
+import withStyles from "@material-ui/core/es/styles/withStyles";
+import ProfileCard from "../components/ProfileCard";
+import Timeline from "../components/Timeline";
+
+const styles = theme => ({
+    root: {
+        marginLeft: "auto",
+        marginRight: "auto",
+        width: "80%",
+        marginTop: theme.spacing.unit * 2,
+        flexGrow: 1,
+        // backgroundColor: theme.palette.background.paper,
+    },
+});
+
 
 class Home extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            tabValue: 0,
+        };
+    }
+
+    handleChange = (event, value) => {
+        this.setState({tabValue: value});
+    };
+
+    componentDidMount() {
+        this.setState({
+            hash:  window.location.hash,
+            tabValue: window.location.hash === "#work-exp" ? 1 : 0
+        });
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(prevState.hash !== window.location.hash) {
+            this.setState({
+                hash:  window.location.hash,
+                tabValue: window.location.hash === "#work-exp" ? 1 : 0
+            });
+        }
     }
 
     render() {
+        const {classes} = this.props;
+        const {tabValue} = this.state;
         return (
             <div>
-                in progress...
-                <Button variant="contained" color="secondary">
-                    Delete
-
-                </Button>
+                <TopProfile/>
+                <div className={classes.root} >
+                    <AppBar position="static">
+                        <Tabs value={tabValue} onChange={this.handleChange}>
+                            <Tab label="About Me" id="about-me"/>
+                            <Tab label="Work Experience" id="work-exp"/>
+                        </Tabs>
+                    </AppBar>
+                    {tabValue === 0 &&
+                        <TabContainer>
+                            <ProfileCard/>
+                        </TabContainer>
+                    }
+                    {tabValue === 1 &&
+                        <TabContainer>
+                            <Timeline/>
+                        </TabContainer>
+                    }
+                </div>
             </div>
         )
     }
 }
 
-export default Home;
+export default withStyles(styles)(Home);

@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 import IconButton from '@material-ui/core/IconButton';
 import './css/TopNavBar.css';
 import Tooltip from "@material-ui/core/Tooltip/Tooltip";
+import { HashLink } from "react-router-hash-link";
 
 class TopNavBar extends Component {
 
@@ -17,10 +18,15 @@ class TopNavBar extends Component {
                 <Navbar.Collapse>
                     <Nav className="mr-auto">
                         <NavLink className="nav-link" to="/home">Home</NavLink>
-                        <NavLink className="nav-link"
-                                 to="/projects">Projects</NavLink>
-                        <NavLink className="nav-link" to="/about-me">About
-                            Me</NavLink>
+                        <NavLink className="nav-link" to="/projects">
+                            Projects
+                        </NavLink>
+                        <HashLink className="nav-link" to="/home#about-me">
+                            About Me
+                        </HashLink>
+                        <HashLink className="nav-link" to="/home#work-exp">
+                            Work Experience
+                        </HashLink>
                     </Nav>
                     <a
                         href="http://github.com/hiufungk/"

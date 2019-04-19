@@ -2,22 +2,35 @@ import React, {Component} from 'react';
 import ProjectCard from "../components/ProjectCard";
 import * as consts from "../constants.js";
 import Grid from "@material-ui/core/Grid/Grid";
+import {withStyles} from "@material-ui/core";
+
+const styles = theme => ({
+    row: {
+        margin: theme.spacing.unit,
+    }
+});
 
 class Projects extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
+        const {classes} = this.props;
         return (
             <Grid
+                className={classes.row}
                 container
                 spacing={8}
+                item
                 xs={12}
                 direction="row"
                 justify="space-evenly"
             >
+                <ProjectCard
+                    title={"TEST"}
+                    description={consts.GITFRIENDS_INFO.description}
+                    githubLink={consts.GITFRIENDS_INFO.githubLink}
+                    tags={consts.GITFRIENDS_INFO.tags}
+                />
+
                 <ProjectCard
                     title={consts.GITFRIENDS_INFO.title}
                     description={consts.GITFRIENDS_INFO.description}
@@ -25,6 +38,14 @@ class Projects extends Component {
                     githubLink={consts.GITFRIENDS_INFO.githubLink}
                     source={consts.GITFRIENDS_INFO.images}
                     tags={consts.GITFRIENDS_INFO.tags}
+                />
+
+                <ProjectCard
+                    title={consts.PAPER_402_INFO.title}
+                    description={consts.PAPER_402_INFO.description}
+                    githubLink={consts.PAPER_402_INFO.githubLink}
+                    source={consts.PAPER_402_INFO.images}
+                    tags={consts.PAPER_402_INFO.tags}
                 />
 
                 <ProjectCard
@@ -42,6 +63,14 @@ class Projects extends Component {
                     githubLink={consts.MEMORYWAVE_INFO.githubLink}
                     source={consts.MEMORYWAVE_INFO.images}
                     tags={consts.MEMORYWAVE_INFO.tags}
+                />
+
+                <ProjectCard
+                    title={consts.BLACK_FRIDAY_INFO.title}
+                    description={consts.BLACK_FRIDAY_INFO.description}
+                    githubLink={consts.BLACK_FRIDAY_INFO.githubLink}
+                    source={consts.BLACK_FRIDAY_INFO.images}
+                    tags={consts.BLACK_FRIDAY_INFO.tags}
                 />
 
                 <ProjectCard
@@ -66,4 +95,4 @@ class Projects extends Component {
     }
 }
 
-export default Projects;
+export default withStyles(styles, {withTheme: true})(Projects);

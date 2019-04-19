@@ -4,7 +4,6 @@ import './App.css';
 import {Route, Switch, BrowserRouter, Redirect} from "react-router-dom";
 import Projects from "./pages/Projects"
 import Home from "./pages/Home"
-import AboutMe from "./pages/AboutMe"
 import TopNavBar from './components/TopNavBar';
 
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
@@ -32,7 +31,6 @@ class App extends Component {
                         </Route>
                         <Route exact path="/home" component={Home}/>
                         <Route exact path="/projects" component={Projects}/>
-                        <Route exact path="/about-me" component={AboutMe}/>
                     </Switch>
                 </BrowserRouter>
             </MuiThemeProvider>
