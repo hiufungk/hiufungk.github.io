@@ -53,6 +53,38 @@ class ProfileCard extends Component {
                 </ExpansionPanel>
                 <ExpansionPanel defaultExpanded={isDesktop}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography>Languages</Typography>
+                    </ExpansionPanelSummary>
+                    <Divider/>
+                    <ExpansionPanelDetails>
+                        <Grid
+                            className={classes.row}
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'row'}
+                            justify={"flex-start"}
+                        >
+                            <Chip
+                                avatar={<Avatar><Flag code="GB"/></Avatar>}
+                                label={"English"}
+                                className={classes.chip}
+                            />
+                            <Chip
+                                avatar={<Avatar><Flag code="HK"/></Avatar>}
+                                label={"Cantonese"}
+                                className={classes.chip}
+                            />
+                            <Chip
+                                avatar={<Avatar><Flag code="CN"/></Avatar>}
+                                label={"Mandarin"}
+                                className={classes.chip}
+                            />
+                        </Grid>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
+                <ExpansionPanel defaultExpanded={isDesktop}>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                         <Typography>Skills</Typography>
                     </ExpansionPanelSummary>
                     <Divider/>
@@ -126,39 +158,6 @@ class ProfileCard extends Component {
                         </Grid>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
-                <ExpansionPanel defaultExpanded={isDesktop}>
-                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography>Languages</Typography>
-                    </ExpansionPanelSummary>
-                    <Divider/>
-                    <ExpansionPanelDetails>
-                        <Grid
-                            className={classes.row}
-                            container
-                            spacing={16}
-                            alignItems={"flex-start"}
-                            direction={'row'}
-                            justify={"flex-start"}
-                        >
-                            <Chip
-                                avatar={<Avatar><Flag code="GB"/></Avatar>}
-                                label={"English"}
-                                className={classes.chip}
-                            />
-                            <Chip
-                                avatar={<Avatar><Flag code="HK"/></Avatar>}
-                                label={"Cantonese"}
-                                className={classes.chip}
-                            />
-                            <Chip
-                                avatar={<Avatar><Flag code="CN"/></Avatar>}
-                                label={"Mandarin"}
-                                className={classes.chip}
-                            />
-                        </Grid>
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-
                 </Paper>
             </div>
         );
