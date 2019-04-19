@@ -25,33 +25,13 @@ import sjcLogo from "../assets/sjc_logo.jpg"
 class Timeline extends Component {
 
     render() {
+        const iconBackgroundColour = "rgb(33, 150, 243)";
         return (
             <VerticalTimeline>
-                <div className="aabcd">
-                    <VerticalTimelineElement
-                        // className="vertical-timeline-element--education"
-                        date="2011 - present"
-                        iconStyle={{
-                            background: 'rgb(33, 150, 243)',
-                            color: '#fff'
-                        }}
-                        icon={<WorkIcon/>}
-                    >
-                        {/*<div className="left-card-date">*/}
-                            {/*aaaaaaaaaaaaa*/}
-                        {/*</div>*/}
-                        <WorkExpCard
-                            logo={ingenuityLogo}
-                            companyName={"Ingenuity Lab"}
-                            jobTitle={"Research Assistant/Software Developer"}
-                            link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
-                        />
-                    </VerticalTimelineElement>
-                </div>
                 <VerticalTimelineElement
-                    date="2011 - present"
+                    date="2015 - present"
                     iconStyle={{
-                        background: 'rgb(33, 150, 243)',
+                        background: iconBackgroundColour,
                         color: '#fff'
                     }}
                     icon={<SchoolIcon/>}
@@ -59,29 +39,40 @@ class Timeline extends Component {
                     <WorkExpCard
                         logo={uniLogo}
                         companyName={"University of Alberta"}
-                        link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                        link={"https://www.ualberta.ca/computing-science/"}
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    date="2010 - 2011"
-                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
+                    date="2017 May - 2018 April"
+                    iconStyle={{
+                        background: iconBackgroundColour,
+                        color: '#fff'
+                    }}
                     icon={<WorkIcon/>}
                 >
-                    {/*<span className="right-card-date">*/}
-                        {/*bbbzasds*/}
-                    {/*</span>*/}
                     <WorkExpCard
-                        logo={hostlinkLogo}
-                        companyName={"HostLink (HK)"}
+                        logo={ingenuityLogo}
+                        companyName={"Ingenuity Lab"}
                         jobTitle={"Research Assistant/Software Developer"}
                         link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    // className="vertical-timeline-element--education"
-                    date="2011 - present"
+                    date="2016 Summer"
+                    iconStyle={{background: iconBackgroundColour, color: '#fff'}}
+                    icon={<WorkIcon/>}
+                >
+                    <WorkExpCard
+                        logo={hostlinkLogo}
+                        companyName={"HostLink (HK)"}
+                        jobTitle={"Project Coordinator"}
+                        link={"https://www.hostlink.com.hk/en/"}
+                    />
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                    date="2013 - 2015"
                     iconStyle={{
-                        background: 'rgb(33, 150, 243)',
+                        background: iconBackgroundColour,
                         color: '#fff'
                     }}
                     icon={<SchoolIcon/>}
@@ -89,26 +80,25 @@ class Timeline extends Component {
                     <WorkExpCard
                         logo={mcmathLogo}
                         companyName={"Ecole Secondaire R.A. McMath Secondary School"}
-                        link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                        link={"https://mcmath.sd38.bc.ca/"}
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    // className="vertical-timeline-element--education"
-                    date="2011 - present"
-                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
+                    date="2015 Summer"
+                    iconStyle={{background: iconBackgroundColour, color: '#fff'}}
                     icon={<WorkIcon/>}
                 >
                     <WorkExpCard
                         logo={vbahkLogo}
                         companyName={"Volleyball Association of Hong Kong"}
-                        jobTitle={"Research Assistant/Software Developer"}
-                        link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                        jobTitle={"Office"}
+                        link={"http://www.vbahk.org.hk/"}
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    date="2011 - present"
+                    date="2008 - 2013"
                     iconStyle={{
-                        background: 'rgb(33, 150, 243)',
+                        background: iconBackgroundColour,
                         color: '#fff'
                     }}
                     icon={<SchoolIcon/>}
@@ -116,7 +106,7 @@ class Timeline extends Component {
                     <WorkExpCard
                         logo={sjcLogo}
                         companyName={"St. Joseph's College"}
-                        link={"https://www.linkedin.com/company/ingenuity-lab/about/"}
+                        link={"https://www.sjc.edu.hk/"}
                     />
                 </VerticalTimelineElement>
             </VerticalTimeline>

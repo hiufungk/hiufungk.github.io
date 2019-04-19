@@ -34,11 +34,10 @@ class WorkExpCard extends Component {
     }
 
     getTitle() {
-        let title = this.props.companyName;
         if(this.props.jobTitle) {
-            title +=  "-" + this.props.jobTitle
+            return this.props.jobTitle;
         }
-        return (title);
+        return null;
     }
 
     componentDidMount() {
@@ -54,12 +53,13 @@ class WorkExpCard extends Component {
                 <Avatar src={this.props.logo} className={classes.avatar} />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2" align="center">
+                        {this.props.companyName}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="h2" align="center">
                         {this.getTitle()}
                     </Typography>
                     <Typography component="p">
-                        Lizards are a widespread group of squamate reptiles,
-                        with over 6,000 species, ranging
-                        across all continents except Antarctica
+                        {this.props.details}
                     </Typography>
                 </CardContent>
                 </CardActionArea>
@@ -75,6 +75,7 @@ WorkExpCard.propTypes = {
     companyName: PropTypes.string.isRequired,
     jobTitle: PropTypes.string,
     link: PropTypes.string.isRequired,
+    details: PropTypes.string
 };
 
 export default withStyles(styles, {withTheme: true})(WorkExpCard);
