@@ -49,7 +49,9 @@ class ProfileCard extends Component {
 
     render() {
         const {classes} = this.props,
-            isDesktop = !this.isMobile();
+            isDesktop = !this.isMobile(),
+            aboutMeText1 = "I am a recent graduate from the University of Alberta looking forward to be a full stack software developer. I have developed multiple software in various team sizes and experienced in Agile practices such as scrum, poker planning and sprint cycles. I have also led the team developed a project that requires RESTful communication with other teams using test-driven development.",
+            aboutMeText2 = "I am passionate in creating quality software with best practices and good architecture design. Aside from that I enjoys cooking and playing volleyball on my free time as well.";
         return (
             <div className={classes.root}>
                 <Paper className={classes.paper}>
@@ -59,9 +61,21 @@ class ProfileCard extends Component {
                     </ExpansionPanelSummary>
                     <Divider/>
                     <ExpansionPanelDetails>
-                        <Typography>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                        </Typography>
+                        <Grid
+                            className={classes.row}
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'column'}
+                            justify={"flex-start"}
+                        >
+                            <Typography>
+                                {aboutMeText1}
+                            </Typography>
+                            <Typography>
+                                {aboutMeText2}
+                            </Typography>
+                        </Grid>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
                 <ExpansionPanel defaultExpanded={isDesktop}>
