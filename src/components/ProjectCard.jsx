@@ -191,7 +191,7 @@ class ProjectCard extends Component {
     render() {
         const {classes, theme} = this.props;
         return (
-            <Paper className={classes.root}>
+            <Paper className={classes.root} id={this.props.id}>
                 <CardHeader title={this.props.title} />
                 <CardContent>
                     {/*<Typography gutterBottom variant="h5" component="h2">*/}
@@ -218,6 +218,7 @@ class ProjectCard extends Component {
 }
 
 ProjectCard.propTypes = {
+    id: PropTypes.string,
     classes: PropTypes.object,
     theme: PropTypes.object,
     source: PropTypes.array,

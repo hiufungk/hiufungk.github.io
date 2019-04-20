@@ -76,6 +76,7 @@ class Projects extends Component {
                 />
 
                 <ProjectCard
+                    id="hfold"
                     title={consts.HFOLD_INFO.title}
                     description={consts.HFOLD_INFO.description}
                     githubLink={consts.HFOLD_INFO.githubLink}
