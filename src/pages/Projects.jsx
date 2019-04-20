@@ -46,6 +46,7 @@ class Projects extends Component {
                     githubLink={consts.PAPER_402_INFO.githubLink}
                     source={consts.PAPER_402_INFO.images}
                     tags={consts.PAPER_402_INFO.tags}
+                    paperLink={consts.PAPER_402_INFO.paperLink}
                 />
 
                 <ProjectCard
@@ -71,9 +72,11 @@ class Projects extends Component {
                     githubLink={consts.BLACK_FRIDAY_INFO.githubLink}
                     source={consts.BLACK_FRIDAY_INFO.images}
                     tags={consts.BLACK_FRIDAY_INFO.tags}
+                    paperLink={consts.BLACK_FRIDAY_INFO.paperLink}
                 />
 
                 <ProjectCard
+                    id="hfold"
                     title={consts.HFOLD_INFO.title}
                     description={consts.HFOLD_INFO.description}
                     githubLink={consts.HFOLD_INFO.githubLink}

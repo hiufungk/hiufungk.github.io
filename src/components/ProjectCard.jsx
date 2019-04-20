@@ -156,10 +156,42 @@ class ProjectCard extends Component {
         );
     }
 
+    getDemoButton() {
+        if(this.props.demoLink) {
+            return (
+                <a
+                    href={this.props.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Button hidden={!this.props.demoLink} size="small" color="primary">
+                        Video Demo
+                    </Button>
+                </a>
+            );
+        }
+    }
+
+    getPaperButton() {
+        if(this.props.paperLink) {
+            return (
+                <a
+                    href={this.props.paperLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Button hidden={!this.props.paperLink} size="small" color="primary">
+                        View Paper
+                    </Button>
+                </a>
+            );
+        }
+    }
+
     render() {
         const {classes, theme} = this.props;
         return (
-            <Paper className={classes.root}>
+            <Paper className={classes.root} id={this.props.id}>
                 <CardHeader title={this.props.title} />
                 <CardContent>
                     {/*<Typography gutterBottom variant="h5" component="h2">*/}
@@ -173,15 +205,8 @@ class ProjectCard extends Component {
                 <CardContent>
                 <CardActions>
                     {this.getGithubButton()}
-                    <a
-                        href={this.props.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Button hidden={!this.props.demoLink} size="small" color="primary">
-                            Video Demo
-                        </Button>
-                    </a>
+                    {this.getDemoButton()}
+                    {this.getPaperButton()}
                 </CardActions>
                 <CardActions>
                     {this.getChips()}
@@ -193,12 +218,14 @@ class ProjectCard extends Component {
 }
 
 ProjectCard.propTypes = {
+    id: PropTypes.string,
     classes: PropTypes.object,
     theme: PropTypes.object,
     source: PropTypes.array,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     demoLink: PropTypes.string,
+    paperLink: PropTypes.string,
     githubLink: PropTypes.string,
     isPrivate: PropTypes.bool,
     tags: PropTypes.array

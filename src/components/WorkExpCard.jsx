@@ -19,6 +19,12 @@ const styles = theme => ({
         margin: "5% auto 0 auto",
         width: 90,
         height: 90,
+        '& img:hover': {
+            cursor: "pointer"
+        }
+    },
+    ahref: {
+        color: theme.palette.text.primary
     }
 });
 
@@ -27,6 +33,7 @@ class WorkExpCard extends Component {
         super(props);
         this.onClick = this.onClick.bind(this);
         this.getTitle = this.getTitle.bind(this);
+        this.getDetails = this.getDetails.bind(this);
     }
 
     onClick() {
@@ -45,24 +52,34 @@ class WorkExpCard extends Component {
             this.props.theme.palette.background.paper);
     }
 
+    getDetails() {
+        if(this.props.details) {
+            console.log("get details")
+            return this.props.details();
+        }
+    }
+
     render() {
         const {classes} = this.props;
         return (
             <Card className={classes.card}>
-                <CardActionArea onClick={this.onClick}>
-                <Avatar src={this.props.logo} className={classes.avatar} />
+                <Avatar src={this.props.logo} className={classes.avatar} onClick={this.onClick}/>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2" align="center">
-                        {this.props.companyName}
+                        <a
+                            className={classes.ahref}
+                            href={this.props.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {this.props.companyName}
+                        </a>
                     </Typography>
                     <Typography gutterBottom variant="h5" component="h2" align="center">
                         {this.getTitle()}
                     </Typography>
-                    <Typography component="p">
-                        {this.props.details}
-                    </Typography>
+                    {this.getDetails()}
                 </CardContent>
-                </CardActionArea>
             </Card>
         );
     }
@@ -75,7 +92,7 @@ WorkExpCard.propTypes = {
     companyName: PropTypes.string.isRequired,
     jobTitle: PropTypes.string,
     link: PropTypes.string.isRequired,
-    details: PropTypes.string
+    details: PropTypes.func
 };
 
 export default withStyles(styles, {withTheme: true})(WorkExpCard);

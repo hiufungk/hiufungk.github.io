@@ -15,6 +15,19 @@ import Avatar from "@material-ui/core/Avatar/Avatar";
 import Flag from 'react-world-flags'
 import Grid from "@material-ui/core/Grid/Grid";
 
+import androidLogo from "../assets/logo/android-logo.png"
+import cppLogo from "../assets/logo/C++-01.png"
+import djangoLogo from "../assets/logo/django-logo.png"
+import excelLogo from "../assets/logo/excel-logo.png"
+import googleMapLogo from "../assets/logo/google-maps-png-google-maps-icon-1600.png"
+import javaLogo from "../assets/logo/java-logo.png"
+import jsLogo from "../assets/logo/JavaScript-logo.png"
+import pythonLogo from "../assets/logo/python-logo.png"
+import reactLogo from "../assets/logo/React.js_logo-512.png"
+import travisLogo from "../assets/logo/travisLogo.png"
+import gitLogo from "../assets/logo/git.png"
+
+
 const styles = theme => ({
     chip: {
         margin: theme.spacing.unit,
@@ -36,7 +49,9 @@ class ProfileCard extends Component {
 
     render() {
         const {classes} = this.props,
-            isDesktop = !this.isMobile();
+            isDesktop = !this.isMobile(),
+            aboutMeText1 = "I am a recent graduate from the University of Alberta looking forward to be a full stack software developer. I have developed multiple software in various team sizes and experienced in Agile practices such as scrum, poker planning and sprint cycles. I have also led the team developed a project that requires RESTful communication with other teams using test-driven development.",
+            aboutMeText2 = "I am passionate in creating quality software with best practices and good architecture design. Aside from that I enjoys cooking and playing volleyball on my free time as well.";
         return (
             <div className={classes.root}>
                 <Paper className={classes.paper}>
@@ -46,83 +61,20 @@ class ProfileCard extends Component {
                     </ExpansionPanelSummary>
                     <Divider/>
                     <ExpansionPanelDetails>
-                        <Typography>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                        </Typography>
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-                <ExpansionPanel defaultExpanded={isDesktop}>
-                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography>Skills</Typography>
-                    </ExpansionPanelSummary>
-                    <Divider/>
-                    <ExpansionPanelDetails>
                         <Grid
+                            className={classes.row}
                             container
                             spacing={16}
                             alignItems={"flex-start"}
                             direction={'column'}
                             justify={"flex-start"}
                         >
-                        <Grid
-                            className={classes.row}
-                            container
-                            spacing={16}
-                            alignItems={"flex-start"}
-                            direction={'row'}
-                            justify={"flex-start"}
-                        >
-                            <Chip label={"Python"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Java"} color="secondary" className={classes.chip}/>
-                            <Chip label={"C++"} color="secondary" className={classes.chip}/>
-                            <Chip label={"JavaScript"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Excel VBA"} color="secondary" className={classes.chip}/>
-                        </Grid>
-                        <Grid
-                            className={classes.row}
-                            container
-                            spacing={16}
-                            alignItems={"flex-start"}
-                            direction={'row'}
-                            justify={"flex-start"}
-                        >
-                            <Chip label={"Web"} color="secondary" className={classes.chip}/>
-                            <Chip label={"React"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Android"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Google Maps"} color="secondary" className={classes.chip}/>
-                            <Chip label={"SQL"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Object Relational Mapping"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Django"} color="secondary" className={classes.chip}/>
-                        </Grid>
-                        <Grid
-                            className={classes.row}
-                            container
-                            spacing={16}
-                            alignItems={"flex-start"}
-                            direction={'row'}
-                            justify={"flex-start"}
-                        >
-                            <Chip label={"Machine Learning"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Reinforcement Learning"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Dynamic Programming"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Object Oriented Design"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Algorithm Design"} color="secondary" className={classes.chip}/>
-                        </Grid>
-                        <Grid
-                            className={classes.row}
-                            container
-                            spacing={16}
-                            alignItems={"flex-start"}
-                            direction={'row'}
-                            justify={"flex-start"}
-                        >
-                            <Chip label={"Continuous Integration"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Agile"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Test Driven Development"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Poker Planning"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Sprint Cycles"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Client Interaction"} color="secondary" className={classes.chip}/>
-                        </Grid>
+                            <Typography>
+                                {aboutMeText1}
+                            </Typography>
+                            <Typography>
+                                {aboutMeText2}
+                            </Typography>
                         </Grid>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
@@ -158,7 +110,82 @@ class ProfileCard extends Component {
                         </Grid>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
-
+                <ExpansionPanel defaultExpanded={isDesktop}>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography>Skills</Typography>
+                    </ExpansionPanelSummary>
+                    <Divider/>
+                    <ExpansionPanelDetails>
+                        <Grid
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'column'}
+                            justify={"flex-start"}
+                        >
+                        <Grid
+                            className={classes.row}
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'row'}
+                            justify={"flex-start"}
+                        >
+                            <Chip label={"Python"} color="secondary" className={classes.chip} avatar={<Avatar><img src={pythonLogo} alt="Python"/></Avatar>}/>
+                            <Chip label={"Java"} color="secondary" className={classes.chip} avatar={<Avatar><img src={javaLogo} alt="Java"/></Avatar>}/>
+                            <Chip label={"C++"} color="secondary" className={classes.chip} avatar={<Avatar><img src={cppLogo} alt="C++"/> </Avatar>}/>
+                            <Chip label={"JavaScript"} color="secondary" className={classes.chip} avatar={<Avatar><img src={jsLogo} alt="JavaScript"/></Avatar>}/>
+                            <Chip label={"Excel VBA"} color="secondary" className={classes.chip} avatar={<Avatar><img src={excelLogo} alt="Excel VBA"/></Avatar>}/>
+                        </Grid>
+                        <Grid
+                            className={classes.row}
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'row'}
+                            justify={"flex-start"}
+                        >
+                            <Chip label={"Web"} color="secondary" className={classes.chip} variant="outlined"/>
+                            <Chip label={"React"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={reactLogo} alt="React"/></Avatar>}/>
+                            <Chip label={"Android"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={androidLogo} alt="Android"/></Avatar>}/>
+                            <Chip label={"Google Maps"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={googleMapLogo} alt="Google Maps"/></Avatar>}/>
+                            <Chip label={"SQL"} color="secondary" className={classes.chip} variant="outlined" />
+                            <Chip label={"Object Relational Mapping"} color="secondary" className={classes.chip} variant="outlined"/>
+                            <Chip label={"Django"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={djangoLogo} alt="Django"/></Avatar>}/>
+                            <Chip label={"Git"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={gitLogo} alt="GitHub"/></Avatar>}/>
+                        </Grid>
+                        <Grid
+                            className={classes.row}
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'row'}
+                            justify={"flex-start"}
+                        >
+                            <Chip label={"Machine Learning"} color="secondary" className={classes.chip} avatar={<Avatar>ML</Avatar>}/>
+                            <Chip label={"Reinforcement Learning"} color="secondary" className={classes.chip} avatar={<Avatar>RL</Avatar>}/>
+                            <Chip label={"Dynamic Programming"} color="secondary" className={classes.chip} avatar={<Avatar>DP</Avatar>}/>
+                            <Chip label={"Object Oriented Design"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Algorithm Design"} color="secondary" className={classes.chip}/>
+                        </Grid>
+                        <Grid
+                            className={classes.row}
+                            container
+                            spacing={16}
+                            alignItems={"flex-start"}
+                            direction={'row'}
+                            justify={"flex-start"}
+                        >
+                            <Chip label={"Continuous Integration"} color="secondary" className={classes.chip} avatar={<Avatar><img src={travisLogo} alt="Travis CI"/></Avatar>}/>
+                            <Chip label={"Agile"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Test Driven Development"} color="secondary" className={classes.chip} avatar={<Avatar>TDD</Avatar>}/>
+                            <Chip label={"Poker Planning"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Sprint Cycles"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Client Interaction"} color="secondary" className={classes.chip}/>
+                        </Grid>
+                        </Grid>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
                 </Paper>
             </div>
         );

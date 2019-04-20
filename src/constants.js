@@ -137,7 +137,7 @@ export const OUTDOORS_INFO = {
 
 export const FEELTRIP_INFO = {
     title: "FeelTrip",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    description: "FeelTrip is an Android social network application for a university project with 5 members. Users can create posts and react to them. They can also add friends and view posts based on their current location.",
     githubLink: "https://github.com/CMPUT301W17T11/FeelTrip",
     demoLink: "https://youtu.be/Yo6Uv4B39sM",
     tags: ["Android", "Google Maps"],
@@ -159,7 +159,7 @@ export const FEELTRIP_INFO = {
 
 export const MEMORYWAVE_INFO = {
     title: "Memory Wave",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    description: "Memory Wave is a rhythm game with a memory aspect to it. It is our first time creating a game and we spent 24 hours to develop it in hackathon.",
     githubLink: "https://github.com/Hk-tang/MemoryWave",
     tags: ["C#", "Unity"],
     images: [
@@ -179,8 +179,8 @@ export const MEMORYWAVE_INFO = {
 };
 
 export const HFOLD_INFO = {
-    title: "HFold (iterative / interacting)",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    title: "HFold (Iterative / Interacting)",
+    description: " I worked on these programs during my internship at the Ingenuity Lab as a research assistant/software developer. HFold and HFold Iterative are two different algorithms that predicts RNA pseudoknotted secondary structure. My main task is to modify the existing dynamic programming algorithm used in the 2 programs mentioned above to create Hfold Interacting, which predicts the pseudoknotted secondary structure when two RNA or DNA interact with each other.",
     githubLink: "https://github.com/HosnaJabbari",
     tags: ["Dynamic Programming", "C++"],
     images: [
@@ -201,7 +201,7 @@ export const HFOLD_INFO = {
 
 export const BLACK_FRIDAY_INFO = {
     title: "Black Friday Sales Prediction",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    description: "We used various machine learning algorithm including Neural Network, Ridge Regression and Random Forest Regression to predict how much people will spend on Black Friday. After we built the 3 different models, we compared them and see which model performed the best.",
     githubLink: "https://github.com/hiufungk/BlackFridayPrediction",
     tags: ["Machine Learning"],
     images: [
@@ -213,12 +213,13 @@ export const BLACK_FRIDAY_INFO = {
             label: 'Algorithm Comparison',
             imgPath: blackFridayAlgComp,
         }
-    ]
+    ],
+    paperLink: "https://github.com/hiufungk/BlackFridayPrediction/blob/master/CMPUT-466-Mini-Project.pdf"
 };
 
 export const PAPER_402_INFO = {
     title: "Investigating the Relationship Between Testing and Pull Requests",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    description: "Our goal is to improve developer workflow by trying to increase the rate of pull requests being merged. We mined the TravisTorrent dataset and GitHub to conduct our experiment and investigated the relationship between testing and pull requests.",
     githubLink: "https://github.com/cmput402-w19/project-Team8",
     tags: ["Software Quality", "Testing"],
     images: [
@@ -230,5 +231,6 @@ export const PAPER_402_INFO = {
             label: 'Research Paper',
             imgPath: paper_402,
         }
-    ]
+    ],
+    paperLink: "https://github.com/hiufungk/BlackFridayPrediction/blob/master/CMPUT-466-Mini-Project.pdf"
 };
