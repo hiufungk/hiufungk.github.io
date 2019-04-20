@@ -15,6 +15,19 @@ import Avatar from "@material-ui/core/Avatar/Avatar";
 import Flag from 'react-world-flags'
 import Grid from "@material-ui/core/Grid/Grid";
 
+import androidLogo from "../assets/logo/android-logo.png"
+import cppLogo from "../assets/logo/C++-01.png"
+import djangoLogo from "../assets/logo/django-logo.png"
+import excelLogo from "../assets/logo/excel-logo.png"
+import googleMapLogo from "../assets/logo/google-maps-png-google-maps-icon-1600.png"
+import javaLogo from "../assets/logo/java-logo.png"
+import jsLogo from "../assets/logo/JavaScript-logo.png"
+import pythonLogo from "../assets/logo/python-logo.png"
+import reactLogo from "../assets/logo/React.js_logo-512.png"
+import travisLogo from "../assets/logo/travisLogo.png"
+import gitLogo from "../assets/logo/git.png"
+
+
 const styles = theme => ({
     chip: {
         margin: theme.spacing.unit,
@@ -104,11 +117,11 @@ class ProfileCard extends Component {
                             direction={'row'}
                             justify={"flex-start"}
                         >
-                            <Chip label={"Python"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Java"} color="secondary" className={classes.chip}/>
-                            <Chip label={"C++"} color="secondary" className={classes.chip}/>
-                            <Chip label={"JavaScript"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Excel VBA"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Python"} color="secondary" className={classes.chip} avatar={<Avatar><img src={pythonLogo} alt="Python"/></Avatar>}/>
+                            <Chip label={"Java"} color="secondary" className={classes.chip} avatar={<Avatar><img src={javaLogo} alt="Java"/></Avatar>}/>
+                            <Chip label={"C++"} color="secondary" className={classes.chip} avatar={<Avatar><img src={cppLogo} alt="C++"/> </Avatar>}/>
+                            <Chip label={"JavaScript"} color="secondary" className={classes.chip} avatar={<Avatar><img src={jsLogo} alt="JavaScript"/></Avatar>}/>
+                            <Chip label={"Excel VBA"} color="secondary" className={classes.chip} avatar={<Avatar><img src={excelLogo} alt="Excel VBA"/></Avatar>}/>
                         </Grid>
                         <Grid
                             className={classes.row}
@@ -118,13 +131,14 @@ class ProfileCard extends Component {
                             direction={'row'}
                             justify={"flex-start"}
                         >
-                            <Chip label={"Web"} color="secondary" className={classes.chip}/>
-                            <Chip label={"React"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Android"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Google Maps"} color="secondary" className={classes.chip}/>
-                            <Chip label={"SQL"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Object Relational Mapping"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Django"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Web"} color="secondary" className={classes.chip} variant="outlined"/>
+                            <Chip label={"React"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={reactLogo} alt="React"/></Avatar>}/>
+                            <Chip label={"Android"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={androidLogo} alt="Android"/></Avatar>}/>
+                            <Chip label={"Google Maps"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={googleMapLogo} alt="Google Maps"/></Avatar>}/>
+                            <Chip label={"SQL"} color="secondary" className={classes.chip} variant="outlined" />
+                            <Chip label={"Object Relational Mapping"} color="secondary" className={classes.chip} variant="outlined"/>
+                            <Chip label={"Django"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={djangoLogo} alt="Django"/></Avatar>}/>
+                            <Chip label={"Git"} color="secondary" className={classes.chip} variant="outlined" avatar={<Avatar><img src={gitLogo} alt="GitHub"/></Avatar>}/>
                         </Grid>
                         <Grid
                             className={classes.row}
@@ -134,9 +148,9 @@ class ProfileCard extends Component {
                             direction={'row'}
                             justify={"flex-start"}
                         >
-                            <Chip label={"Machine Learning"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Reinforcement Learning"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Dynamic Programming"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Machine Learning"} color="secondary" className={classes.chip} avatar={<Avatar>ML</Avatar>}/>
+                            <Chip label={"Reinforcement Learning"} color="secondary" className={classes.chip} avatar={<Avatar>RL</Avatar>}/>
+                            <Chip label={"Dynamic Programming"} color="secondary" className={classes.chip} avatar={<Avatar>DP</Avatar>}/>
                             <Chip label={"Object Oriented Design"} color="secondary" className={classes.chip}/>
                             <Chip label={"Algorithm Design"} color="secondary" className={classes.chip}/>
                         </Grid>
@@ -148,9 +162,9 @@ class ProfileCard extends Component {
                             direction={'row'}
                             justify={"flex-start"}
                         >
-                            <Chip label={"Continuous Integration"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Continuous Integration"} color="secondary" className={classes.chip} avatar={<Avatar><img src={travisLogo} alt="Travis CI"/></Avatar>}/>
                             <Chip label={"Agile"} color="secondary" className={classes.chip}/>
-                            <Chip label={"Test Driven Development"} color="secondary" className={classes.chip}/>
+                            <Chip label={"Test Driven Development"} color="secondary" className={classes.chip} avatar={<Avatar>TDD</Avatar>}/>
                             <Chip label={"Poker Planning"} color="secondary" className={classes.chip}/>
                             <Chip label={"Sprint Cycles"} color="secondary" className={classes.chip}/>
                             <Chip label={"Client Interaction"} color="secondary" className={classes.chip}/>
