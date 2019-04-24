@@ -15,3 +15,8 @@
     color: black;
     background-color: transparent !important;
 }
+
+
+.bg-primary {
+    background: var(--background-colour) !important;
+}
