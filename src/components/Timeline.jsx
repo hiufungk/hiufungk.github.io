@@ -57,7 +57,7 @@ class Timeline extends Component {
         return (
             <VerticalTimeline>
                 <VerticalTimelineElement
-                    date="2015 - present"
+                    date="2014 - present"
                     iconStyle={{
                         background: iconBackgroundColour,
                         color: '#fff'
@@ -100,20 +100,6 @@ class Timeline extends Component {
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                    date="2013 - 2015"
-                    iconStyle={{
-                        background: iconBackgroundColour,
-                        color: '#fff'
-                    }}
-                    icon={<SchoolIcon/>}
-                >
-                    <WorkExpCard
-                        logo={mcmathLogo}
-                        companyName={"Ecole Secondaire R.A. McMath Secondary School"}
-                        link={"https://mcmath.sd38.bc.ca/"}
-                    />
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
                     date="2015 Summer"
                     iconStyle={{background: iconBackgroundColour, color: '#fff'}}
                     icon={<WorkIcon/>}
@@ -124,6 +110,20 @@ class Timeline extends Component {
                         jobTitle={"Office"}
                         link={"http://www.vbahk.org.hk/"}
                         details={this.getVbahkDetail}
+                    />
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                    date="2013 - 2014"
+                    iconStyle={{
+                        background: iconBackgroundColour,
+                        color: '#fff'
+                    }}
+                    icon={<SchoolIcon/>}
+                >
+                    <WorkExpCard
+                        logo={mcmathLogo}
+                        companyName={"Ecole Secondaire R.A. McMath Secondary School"}
+                        link={"https://mcmath.sd38.bc.ca/"}
                     />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement

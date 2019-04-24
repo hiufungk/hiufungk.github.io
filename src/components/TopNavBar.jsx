@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import './css/TopNavBar.css';
 import Tooltip from "@material-ui/core/Tooltip/Tooltip";
 import { HashLink } from "react-router-hash-link";
+import {withStyles} from "@material-ui/core";
 
 class TopNavBar extends Component {
     constructor(props) {
@@ -14,6 +15,11 @@ class TopNavBar extends Component {
         };
         this.toggleNav = this.toggleNav.bind(this);
         this.collapseNav = this.collapseNav.bind(this);
+    }
+
+    componentDidMount() {
+        document.documentElement.style.setProperty("--background-colour",
+            this.props.theme.palette.primary.main);
     }
 
     toggleNav() {
@@ -85,5 +91,5 @@ class TopNavBar extends Component {
     }
 }
 
-export default TopNavBar;
+export default withStyles(null, {withTheme: true})(TopNavBar);
 
