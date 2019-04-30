@@ -155,7 +155,7 @@ class ProfileCard extends Component {
                             <Chip label={"React"} color="secondary" variant="outlined" className={classes.chip} avatar={<Avatar><img src={reactLogo} alt="React"/></Avatar>}/>
                             <Chip label={"Android"} color="secondary" variant="outlined" className={classes.chip} avatar={<Avatar><img src={androidLogo} alt="Android"/></Avatar>}/>
                             <Chip label={"Google Maps"} color="secondary" variant="outlined" className={classes.chip} avatar={<Avatar><img src={googleMapLogo} alt="Google Maps"/></Avatar>}/>
-                            <Chip label={"SQL"} color="masecondary" variant="outlined" className={classes.chip} />
+                            <Chip label={"SQL"} color="secondary" variant="outlined" className={classes.chip} />
                             <Chip label={"Object Relational Mapping"} color="secondary" variant="outlined" className={classes.chip}/>
                             <Chip label={"Django"} color="secondary" variant="outlined" className={classes.chip} avatar={<Avatar><img src={djangoLogo} alt="Django"/></Avatar>}/>
                             <Chip label={"Git"} color="secondary" variant="outlined" className={classes.chip} avatar={<Avatar><img src={gitLogo} alt="GitHub"/></Avatar>}/>

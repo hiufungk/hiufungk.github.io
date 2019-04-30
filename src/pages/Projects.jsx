@@ -68,12 +68,12 @@ class Projects extends Component {
                 direction="row"
                 justify="space-evenly"
             >
-                <ProjectCard
-                    title={"TEST"}
-                    description={consts.GITFRIENDS_INFO.description}
-                    githubLink={consts.GITFRIENDS_INFO.githubLink}
-                    tags={consts.GITFRIENDS_INFO.tags}
-                />
+                {/*<ProjectCard*/}
+                    {/*title={"TEST"}*/}
+                    {/*description={consts.GITFRIENDS_INFO.description}*/}
+                    {/*githubLink={consts.GITFRIENDS_INFO.githubLink}*/}
+                    {/*tags={consts.GITFRIENDS_INFO.tags}*/}
+                {/*/>*/}
 
                 <ProjectCard
                     title={consts.GITFRIENDS_INFO.title}
