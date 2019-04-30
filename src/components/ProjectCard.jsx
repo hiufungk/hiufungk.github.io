@@ -209,7 +209,17 @@ class ProjectCard extends Component {
                     {this.getPaperButton()}
                 </CardActions>
                 <CardActions>
-                    {this.getChips()}
+                    {/*{this.getChips()}*/}
+                    <Grid
+                        className={classes.row}
+                        container
+                        spacing={16}
+                        alignItems={"flex-start"}
+                        direction={'row'}
+                        justify={"flex-start"}
+                    >
+                        {this.props.tags}
+                    </Grid>
                 </CardActions>
                 </CardContent>
             </Paper>

@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from "@material-ui/core/Avatar/Avatar";
 import Card from "@material-ui/core/Card/Card";
 import CardContent from "@material-ui/core/CardContent/CardContent";
-import CardActionArea from "@material-ui/core/CardActionArea/CardActionArea";
 
 const styles = theme => ({
     card: {
