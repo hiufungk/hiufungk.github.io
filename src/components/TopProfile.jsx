@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Avatar from "@material-ui/core/Avatar/Avatar";
 import { Phone, Email } from "@material-ui/icons";
 import backgroundImage from "../assets/profile_background.jpg"
-import profilePic from "../assets/profile.png"
+import profilePic from "../assets/P1090033.JPG"
 import Grid from "@material-ui/core/Grid/Grid";
 
 const styles = theme => ({
