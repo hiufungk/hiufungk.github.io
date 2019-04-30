@@ -28,8 +28,8 @@ const styles = theme => ({
     avatar: {
         display: "block",
         margin: "2% auto 2% auto",
-        width: 90,
-        height: 90,
+        width: 140,
+        height: 140,
     },
     chip: {
         margin: theme.spacing.unit,
