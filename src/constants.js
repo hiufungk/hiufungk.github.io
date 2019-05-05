@@ -232,5 +232,5 @@ export const PAPER_402_INFO = {
             imgPath: paper_402,
         }
     ],
-    paperLink: "https://github.com/hiufungk/BlackFridayPrediction/blob/master/CMPUT-466-Mini-Project.pdf"
+    paperLink: "https://github.com/cmput402-w19/project-Team8/blob/master/Team-8-Final-Paper.pdf"
 };
